@@ -1,0 +1,1000 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#0d1a16" />
+  <meta name="description" content="Premium residential and commercial renovation services, project guidance and construction insights for Brampton / GTA and nearby areas." />
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Teko:wght@500;600&display=swap" rel="stylesheet" />
+  <title>Juneja Construction — Premium Renovation &amp; Construction Across the GTA</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --ink: #122019;
+      --muted: #5d665f;
+      --paper: #f5f6f2;
+      --surface: #ffffff;
+      --surface-soft: #e8eee9;
+      --line: #cfd6d0;
+      --accent: #d7a51f;
+      --accent-dark: #9a7011;
+      --forest: #0d1a16;
+      --forest-soft: #183128;
+      --on-dark: #f8f7f0;
+      --header: rgba(13, 26, 22, .96);
+      --shadow: 0 18px 50px rgba(13, 26, 22, .14);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #eef3ed;
+        --muted: #b7c0ba;
+        --paper: #0f1612;
+        --surface: #17211c;
+        --surface-soft: #1c2b24;
+        --line: #35433b;
+        --accent: #e3b83d;
+        --accent-dark: #f2cc68;
+        --forest: #08110d;
+        --forest-soft: #10251c;
+        --on-dark: #fbfaf4;
+        --header: rgba(8, 17, 13, .97);
+        --shadow: 0 18px 50px rgba(0, 0, 0, .34);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      overflow-x: hidden;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "IBM Plex Sans", sans-serif;
+      line-height: 1.55;
+    }
+    img { display: block; width: 100%; }
+    a { color: inherit; }
+    button, select, input { font: inherit; }
+    h1, h2, h3 { margin: 0; font-family: "Teko", "Arial Narrow", sans-serif; font-weight: 600; line-height: .95; }
+    .skip-link { position: fixed; z-index: 100; top: -5rem; left: 1rem; padding: .7rem 1rem; background: var(--accent); color: #101611; font-weight: 800; }
+    .skip-link:focus { top: 1rem; }
+
+    .site-header { position: sticky; z-index: 30; top: 0; background: var(--header); color: #fff; border-bottom: 1px solid rgba(255,255,255,.12); }
+    .topline { background: #07100c; color: #d5ddd7; font-size: .77rem; }
+    .topline-inner { max-width: 1240px; min-height: 34px; margin: auto; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+    .topline-links { display: flex; align-items: center; gap: 1.25rem; }
+    .topline a { color: #fff; text-decoration: none; font-weight: 600; }
+    .topline a:hover, .topline a:focus-visible { color: var(--accent); }
+    .nav-wrap { max-width: 1240px; min-height: 72px; margin: auto; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+    .brand { display: inline-flex; align-items: center; gap: .75rem; min-width: 0; color: #fff; text-decoration: none; }
+    .brand-mark { width: 35px; height: 35px; display: grid; place-items: center; background: var(--accent); color: #101611; font-family: "Teko", sans-serif; font-size: 1.45rem; font-weight: 600; line-height: 1; }
+    .brand-copy { display: grid; line-height: 1; }
+    .brand-copy strong { font-family: "Teko", sans-serif; font-size: 1.35rem; letter-spacing: .04em; text-transform: uppercase; }
+    .brand-copy small { margin-top: .18rem; color: #bbc4be; font-size: .59rem; letter-spacing: .13em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 1.15rem; }
+    .nav-links a { color: #e7ece8; text-decoration: none; font-size: .86rem; font-weight: 700; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--accent); }
+    .nav-links .header-call { min-height: 42px; padding: 0 .9rem; display: inline-flex; align-items: center; border: 1px solid rgba(255,255,255,.45); color: #fff; }
+    .nav-links .header-call:hover, .nav-links .header-call:focus-visible { border-color: var(--accent); color: var(--accent); }
+    .nav-links .quote-link { min-height: 42px; padding: 0 1rem; display: inline-flex; align-items: center; background: var(--accent); color: #111712; }
+    .menu-button { display: none; padding: .45rem; border: 0; background: transparent; color: #fff; cursor: pointer; }
+    .menu-button svg { width: 27px; height: 27px; }
+
+    .hero { min-height: 720px; position: relative; display: grid; align-items: center; isolation: isolate; color: #fff; background: var(--forest); }
+    .hero::before { content: ""; position: absolute; z-index: -2; inset: 0; background: url("assets/hero.jpg") center / cover no-repeat; }
+    .hero::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(7,16,12,.96) 0%, rgba(7,16,12,.83) 45%, rgba(7,16,12,.36) 78%, rgba(7,16,12,.2) 100%); }
+    .hero-inner { width: min(1240px, 100%); margin: auto; padding: 92px 28px 84px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(390px, .9fr); gap: 2.7rem; align-items: center; }
+    .kicker { display: flex; align-items: center; gap: .75rem; color: #f0cf74; font-weight: 700; font-size: .8rem; letter-spacing: .13em; text-transform: uppercase; }
+    .kicker::before { content: ""; width: 40px; height: 3px; background: var(--accent); }
+    h1 { max-width: 650px; margin-top: 1.1rem; font-size: clamp(3.7rem, 5.8vw, 5.75rem); letter-spacing: -.025em; text-transform: uppercase; overflow-wrap: anywhere; }
+    .hero-copy { max-width: 630px; margin: 1.25rem 0 0; color: #e0e7e2; font-size: 1.08rem; }
+    .hero-copy strong { color: #fff; }
+    .hero-scope { margin: 1.15rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .48rem .9rem; list-style: none; color: #f7f4e8; font-size: .8rem; font-weight: 700; }
+    .hero-scope li { position: relative; padding-left: .8rem; }
+    .hero-scope li::before { content: ""; position: absolute; left: 0; top: .58em; width: 4px; height: 4px; background: var(--accent); }
+    .hero-actions { margin-top: 2rem; display: flex; gap: .8rem; flex-wrap: wrap; }
+    .button { min-height: 52px; padding: 0 1.25rem; display: inline-flex; align-items: center; justify-content: center; gap: .55rem; border: 1px solid transparent; text-decoration: none; font-weight: 800; cursor: pointer; }
+    .button-primary { background: var(--accent); color: #101611; }
+    .button-primary:hover, .button-primary:focus-visible { background: #edc65c; }
+    .button-outline { border-color: rgba(255,255,255,.52); color: #fff; }
+    .button-outline:hover, .button-outline:focus-visible { border-color: var(--accent); color: var(--accent); }
+    .hero-media { position: relative; margin: 0; overflow: hidden; background: #050806; border: 1px solid rgba(255,255,255,.28); box-shadow: 0 28px 70px rgba(0,0,0,.42); }
+    .hero-video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; cursor: pointer; }
+    .video-label { position: absolute; top: 0; left: 0; padding: .55rem .75rem; background: var(--accent); color: #111711; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; pointer-events: none; }
+    .sound-toggle { position: absolute; left: 14px; bottom: 14px; min-height: 44px; padding: 0 .9rem; display: inline-flex; align-items: center; gap: .55rem; border: 1px solid rgba(255,255,255,.48); background: rgba(7,16,12,.92); color: #fff; font: inherit; font-size: .82rem; font-weight: 800; cursor: pointer; }
+    .sound-toggle:hover, .sound-toggle:focus-visible { border-color: var(--accent); color: var(--accent); }
+    .sound-toggle svg { width: 18px; height: 18px; flex: none; }
+
+    .proofbar { background: var(--accent); color: #111711; }
+    .proofbar-inner { max-width: 1240px; margin: auto; display: grid; grid-template-columns: repeat(3, 1fr); }
+    .proof { min-height: 92px; padding: 1rem 28px; display: flex; align-items: center; justify-content: center; gap: .9rem; }
+    .proof + .proof { border-left: 1px solid rgba(17,23,17,.28); }
+    .proof strong { font-family: "Teko", sans-serif; font-size: 2.15rem; line-height: .8; }
+    .proof span { max-width: 150px; font-size: .79rem; font-weight: 700; line-height: 1.25; }
+
+    section { scroll-margin-top: 112px; }
+    .section { max-width: 1240px; margin: auto; padding: 102px 28px; }
+    .section-head { display: grid; grid-template-columns: minmax(0, 650px) minmax(280px, 1fr); gap: 4rem; align-items: end; margin-bottom: 3.2rem; }
+    .section-head h2, .checker-copy h2, .process-copy h2, .contact-copy h2 { font-size: clamp(3.2rem, 6vw, 5.4rem); text-transform: uppercase; }
+    .section-head p, .checker-copy > p, .process-copy > p { margin: 0; color: var(--muted); }
+    .rule { width: 58px; height: 5px; margin-bottom: 1rem; background: var(--accent); }
+
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .why-item { min-height: 275px; padding: 2rem 1.6rem; }
+    .why-item:first-child { padding-left: 0; }
+    .why-item + .why-item { border-left: 1px solid var(--line); }
+    .why-icon { width: 42px; height: 42px; color: var(--accent-dark); }
+    .why-item h3 { margin-top: 2.6rem; font-size: 1.8rem; text-transform: uppercase; }
+    .why-item p { margin: .55rem 0 0; color: var(--muted); }
+
+    .services-section { background: var(--surface-soft); }
+    .service-list { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); }
+    .service { min-height: 290px; padding: 2rem 2.2rem 2rem 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 58px 1fr; gap: 1.1rem; }
+    .service:nth-child(even) { padding-left: 2.2rem; border-left: 1px solid var(--line); }
+    .service-num { color: var(--accent-dark); font-weight: 800; letter-spacing: .1em; }
+    .service h3 { font-size: 2.15rem; text-transform: uppercase; }
+    .service p { margin: .55rem 0 0; color: var(--muted); }
+    .service ul { margin: .9rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .45rem .65rem; list-style: none; }
+    .service li { position: relative; padding-left: .85rem; color: var(--ink); font-size: .78rem; font-weight: 700; }
+    .service li::before { content: ""; position: absolute; left: 0; top: .55em; width: 4px; height: 4px; background: var(--accent); }
+
+    .commercial-band { background: var(--forest-soft); color: var(--on-dark); }
+    .commercial-inner { max-width: 1240px; margin: auto; padding: 86px 28px; display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 5rem; align-items: center; }
+    .commercial-copy h2 { font-size: clamp(3rem, 5vw, 4.8rem); text-transform: uppercase; }
+    .commercial-copy p { margin: 1rem 0 0; color: #bdc9c1; }
+    .commercial-types { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #3d5147; border-bottom: 1px solid #3d5147; }
+    .commercial-type { padding: 1.6rem 1.2rem; }
+    .commercial-type:first-child { padding-left: 0; }
+    .commercial-type + .commercial-type { border-left: 1px solid #3d5147; }
+    .commercial-type h3 { font-size: 1.75rem; text-transform: uppercase; }
+    .commercial-type p { margin: .45rem 0 0; color: #bdc9c1; font-size: .86rem; }
+
+    .checker-section { background: var(--forest); color: var(--on-dark); }
+    .checker-inner { max-width: 1240px; margin: auto; padding: 102px 28px; display: grid; grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr); gap: 5rem; align-items: start; }
+    .checker-copy { position: sticky; top: 132px; }
+    .checker-copy > p { margin-top: 1rem; color: #bdc9c1; max-width: 420px; }
+    .income-callout { margin-top: 2rem; padding: 1.25rem 0 0 1.25rem; border-left: 3px solid var(--accent); }
+    .income-callout strong { display: block; font-family: "Teko", sans-serif; color: #fff; font-size: 2.6rem; line-height: 1; }
+    .income-callout span { color: #bdc9c1; font-size: .82rem; }
+    .checker-card { padding: 2.1rem; background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+    .checker-card h3 { font-size: 2.35rem; text-transform: uppercase; }
+    .checker-card > p { margin: .5rem 0 1.7rem; color: var(--muted); }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .field { display: grid; gap: .45rem; }
+    .field.full { grid-column: 1 / -1; }
+    .field label, .field legend { font-size: .82rem; font-weight: 800; }
+    select { width: 100%; min-height: 48px; padding: 0 2.5rem 0 .8rem; border: 1px solid var(--line); border-radius: 0; background: var(--paper); color: var(--ink); }
+    fieldset { margin: 0; padding: 0; border: 0; }
+    .choice-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; }
+    .choice { position: relative; }
+    .choice input { position: absolute; opacity: 0; pointer-events: none; }
+    .choice label { min-height: 46px; padding: .5rem; display: grid; place-items: center; border: 1px solid var(--line); background: var(--paper); text-align: center; cursor: pointer; }
+    .choice input:checked + label { border-color: var(--accent-dark); background: var(--accent); color: #111711; }
+    .checker-card .button { width: 100%; margin-top: 1.35rem; }
+    .result { display: none; margin-top: 1.4rem; padding: 1.35rem; background: var(--surface-soft); border-top: 4px solid var(--accent); }
+    .result.visible { display: block; }
+    .result .status { margin: 0; color: var(--accent-dark); font-weight: 800; }
+    .result strong { display: block; margin-top: .25rem; font-family: "Teko", sans-serif; font-size: 2.6rem; line-height: 1; }
+    .result p { margin: .55rem 0 0; color: var(--muted); font-size: .9rem; }
+    .result .button { width: auto; margin-top: 1rem; }
+    .disclaimer { margin-top: 1rem; color: #87968d; font-size: .72rem; line-height: 1.5; }
+
+    .quote-section { background: var(--forest); color: var(--on-dark); }
+    .quote-inner { max-width: 1240px; margin: auto; padding: 96px 28px; display: grid; grid-template-columns: minmax(0, .88fr) minmax(420px, 1.12fr); gap: 5rem; align-items: center; }
+    .quote-copy h2 { font-size: clamp(3.2rem, 6vw, 5.4rem); text-transform: uppercase; }
+    .quote-copy p { max-width: 560px; margin: 1rem 0 0; color: #bdc9c1; }
+    .quote-copy .service-line { margin-top: 1.35rem; color: #fff; font-weight: 700; }
+    .quote-panel { padding: 2rem; background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+    .quote-panel h3 { font-size: 2.35rem; text-transform: uppercase; }
+    .quote-panel > p { margin: .5rem 0 1.3rem; color: var(--muted); }
+    .contact-choice { min-height: 68px; padding: .85rem 1rem; display: grid; grid-template-columns: 42px 1fr auto; gap: .85rem; align-items: center; border-top: 1px solid var(--line); color: var(--ink); text-decoration: none; }
+    .contact-choice:last-child { border-bottom: 1px solid var(--line); }
+    .contact-choice:hover, .contact-choice:focus-visible { background: var(--surface-soft); }
+    .contact-choice svg { width: 30px; height: 30px; color: var(--accent-dark); }
+    .contact-choice strong { display: block; }
+    .contact-choice small { display: block; margin-top: .12rem; color: var(--muted); }
+    .contact-choice > span:last-child { color: var(--accent-dark); font-weight: 800; }
+    .placeholder-note { margin: 1rem 0 0; color: var(--muted); font-size: .75rem; }
+
+    .projects-section { background: var(--surface); }
+    .project-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 18px; }
+    .project { min-height: 320px; position: relative; overflow: hidden; background: var(--forest-soft); color: #fff; }
+    .project:first-child { min-height: 658px; grid-row: span 2; }
+    .project img { height: 100%; object-fit: cover; transition: transform .6s ease; }
+    .project:hover img { transform: scale(1.025); }
+    .project::after { content: ""; position: absolute; inset: 35% 0 0; background: linear-gradient(transparent, rgba(6,13,10,.9)); }
+    .project-info { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; padding: 1.35rem; }
+    .project-info span { color: #f0cf74; font-size: .75rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+    .project-info h3 { margin-top: .25rem; font-size: 2.15rem; text-transform: uppercase; }
+    .project-categories { margin-bottom: 1.5rem; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .project-category { min-height: 150px; padding: 1.25rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .project-category span { color: var(--accent-dark); font-size: .72rem; font-weight: 800; letter-spacing: .1em; }
+    .project-category h3 { margin-top: 1.2rem; font-size: 1.75rem; text-transform: uppercase; }
+    .project-category p { margin: .4rem 0 0; color: var(--muted); font-size: .85rem; }
+    .project-note { margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+    .project-note p { margin: 0; color: var(--muted); }
+    .text-link { color: var(--accent-dark); font-weight: 800; text-underline-offset: .22em; white-space: nowrap; }
+
+    .process-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 5rem; align-items: start; }
+    .process-copy { position: sticky; top: 132px; }
+    .process-copy > p { margin-top: 1rem; max-width: 420px; }
+    .steps { border-top: 1px solid var(--line); }
+    .step { display: grid; grid-template-columns: 62px 1fr; gap: 1.2rem; padding: 1.7rem 0; border-bottom: 1px solid var(--line); }
+    .step-num { width: 42px; height: 42px; display: grid; place-items: center; background: var(--accent); color: #111711; font-weight: 800; }
+    .step h3 { font-size: 2rem; text-transform: uppercase; }
+    .step p { margin: .4rem 0 0; color: var(--muted); }
+
+    .reviews { background: var(--accent); color: #111711; }
+    .reviews-inner { max-width: 1240px; margin: auto; padding: 88px 28px; display: grid; grid-template-columns: .65fr 1.35fr; gap: 4rem; }
+    .reviews h2 { font-size: clamp(3.2rem, 6vw, 5.2rem); text-transform: uppercase; }
+    .review-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    blockquote { margin: 0; }
+    blockquote p { margin: 0; font-weight: 600; }
+    blockquote footer { margin-top: 1rem; font-weight: 800; }
+    blockquote footer span { display: block; font-size: .75rem; font-weight: 600; opacity: .72; }
+
+    .cta-band { background: var(--surface-soft); }
+    .cta-inner { max-width: 1240px; margin: auto; padding: 72px 28px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3rem; align-items: center; }
+    .cta-inner h2 { font-size: clamp(3rem, 5.4vw, 5rem); text-transform: uppercase; }
+    .cta-inner p { max-width: 650px; margin: .75rem 0 0; color: var(--muted); }
+    .cta-actions { min-width: 240px; display: grid; gap: .7rem; text-align: center; }
+    .cta-actions a:last-child { color: var(--accent-dark); font-weight: 800; text-underline-offset: .22em; }
+
+
+    .articles-section { background: var(--surface-soft); }
+    .article-categories { margin: -1.5rem 0 2rem; display: flex; flex-wrap: wrap; gap: .55rem; }
+    .article-categories span { padding: .4rem .7rem; border: 1px solid var(--line); background: var(--surface); font-size: .76rem; font-weight: 800; }
+    .article-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .article-card { min-height: 300px; padding: 1.45rem; display: flex; flex-direction: column; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); }
+
+    .article-card-thumb { width: calc(100% + 2.9rem); height: 150px; margin: -1.45rem -1.45rem 1.1rem; object-fit: cover; }
+    .article-hero-image { width: calc(100% + max(56px, 14vw)); max-width: none; height: clamp(260px, 42vw, 470px); margin: .5rem max(-28px, -7vw) 2rem; object-fit: cover; }
+    .article-inline-image { width: 100%; max-height: 390px; margin: 1.6rem 0; object-fit: cover; }
+    .article-image-caption { margin-top: -1.25rem !important; color: var(--muted); font-size: .75rem; }
+
+    .article-card .article-meta { display: flex; justify-content: space-between; gap: .75rem; color: var(--muted); font-size: .7rem; font-weight: 700; }
+    .article-card .article-meta span:first-child { color: var(--accent-dark); text-transform: uppercase; letter-spacing: .08em; }
+    .article-card h3 { margin-top: 1.1rem; font-size: 1.85rem; text-transform: uppercase; }
+    .article-card p { margin: .65rem 0 1.25rem; color: var(--muted); font-size: .88rem; }
+    .article-card a { margin-top: auto; color: var(--accent-dark); font-weight: 800; text-underline-offset: .2em; }
+    .article-reader { position: fixed; z-index: 95; inset: 0; display: none; background: rgba(4,10,7,.76); }
+    .article-reader.open { display: block; }
+    .article-reader-shell { width: min(880px, 100%); height: 100%; margin-left: auto; overflow-y: auto; background: var(--paper); color: var(--ink); box-shadow: -24px 0 70px rgba(0,0,0,.35); }
+    .article-reader-top { position: sticky; z-index: 2; top: 0; min-height: 66px; padding: .75rem 24px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: var(--forest); color: #fff; }
+    .article-reader-top strong { font-size: .86rem; }
+    .article-reader-close { width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.4); background: transparent; color: #fff; cursor: pointer; font-size: 1.35rem; }
+    .article-panel { display: none; padding: 58px max(28px, 7vw) 80px; }
+    .article-panel.active { display: block; }
+    .article-panel .article-meta { color: var(--accent-dark); font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .article-panel h1 { max-width: 760px; margin: 1rem 0 1.2rem; color: var(--ink); font-size: clamp(3rem, 7vw, 5rem); }
+    .article-panel .dek { margin: 0 0 2rem; color: var(--muted); font-size: 1.08rem; }
+    .article-panel h2 { margin: 2.2rem 0 .7rem; font-size: 2.15rem; text-transform: uppercase; }
+    .article-panel p { margin: 0 0 1rem; }
+    .article-panel .article-faq { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+    .article-panel .article-faq h3 { margin-top: 1.25rem; font-size: 1.35rem; text-transform: uppercase; }
+    .article-panel .article-cta { margin-top: 2.5rem; padding: 1.5rem; background: var(--forest); color: #fff; }
+    .article-panel .article-cta h2 { margin: 0; color: #fff; }
+    .article-panel .article-cta p { color: #c4d0c9; }
+    .article-panel a:not(.button) { color: var(--accent-dark); font-weight: 700; }
+
+    .faq-grid { display: grid; grid-template-columns: .65fr 1.35fr; gap: 5rem; }
+    .faq-grid h2 { font-size: clamp(3.2rem, 6vw, 5.2rem); text-transform: uppercase; }
+    .faq-list { border-top: 1px solid var(--line); }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-button { width: 100%; min-height: 76px; padding: 0; display: flex; justify-content: space-between; align-items: center; gap: 1rem; border: 0; background: transparent; color: var(--ink); text-align: left; font-weight: 800; cursor: pointer; }
+    .faq-button svg { width: 20px; height: 20px; flex: none; transition: transform .25s ease; }
+    .faq-button[aria-expanded="true"] svg { transform: rotate(45deg); }
+    .faq-answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s ease; }
+    .faq-answer > div { overflow: hidden; }
+    .faq-answer p { margin: 0; padding: 0 2rem 1.5rem 0; color: var(--muted); }
+    .faq-button[aria-expanded="true"] + .faq-answer { grid-template-rows: 1fr; }
+
+    .contact { background: var(--forest); color: var(--on-dark); }
+    .contact-inner { max-width: 1240px; margin: auto; padding: 96px 28px 48px; }
+    .contact-top { display: grid; grid-template-columns: 1fr minmax(240px, auto); gap: 3rem; align-items: end; }
+    .contact-copy p { max-width: 620px; margin: 1rem 0 0; color: #bdc9c1; }
+    .contact-actions { display: grid; gap: .65rem; }
+    .contact-actions .button { min-width: 250px; }
+    .contact-details { margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid #30463c; display: grid; grid-template-columns: 1.05fr .75fr 1fr .75fr 1.35fr; gap: 1.6rem; }
+    .contact-item small { display: block; color: #8da096; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; }
+    .contact-item strong, .contact-item a { display: block; margin-top: .4rem; color: #fff; font-weight: 700; text-decoration: none; }
+    .contact-item a:hover { color: var(--accent); }
+    .footer-line { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid #30463c; display: flex; justify-content: space-between; gap: 1rem; color: #82968b; font-size: .76rem; }
+
+
+    .contact-modal { position: fixed; z-index: 90; inset: 0; display: grid; place-items: center; padding: 24px; background: rgba(4, 10, 7, .72); opacity: 0; visibility: hidden; transition: opacity .2s ease, visibility .2s ease; }
+    .contact-modal.open { opacity: 1; visibility: visible; }
+    .contact-modal-card { width: min(560px, 100%); position: relative; padding: 2rem; background: var(--surface); color: var(--ink); box-shadow: 0 28px 80px rgba(0,0,0,.42); transform: translateY(12px); transition: transform .2s ease; }
+    .contact-modal.open .contact-modal-card { transform: translateY(0); }
+    .modal-close { position: absolute; top: 12px; right: 12px; width: 44px; height: 44px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; font-size: 1.55rem; line-height: 1; }
+    .contact-modal h2 { padding-right: 48px; font-size: clamp(2.7rem, 7vw, 4rem); text-transform: uppercase; }
+    .contact-modal p { margin: .65rem 0 1.25rem; color: var(--muted); }
+    .modal-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: .65rem; }
+    .modal-actions a { min-height: 48px; padding: .65rem; display: grid; place-items: center; border: 1px solid var(--line); color: var(--ink); text-decoration: none; text-align: center; font-weight: 800; }
+    .modal-actions a:hover, .modal-actions a:focus-visible { border-color: var(--accent-dark); background: var(--surface-soft); }
+    .modal-quote { width: 100%; margin-top: .8rem; }
+    body.modal-open { overflow: hidden; }
+
+    .chat-launcher { position: fixed; z-index: 60; right: 22px; bottom: 92px; width: 56px; height: 56px; display: grid; place-items: center; border: 0; border-radius: 50%; background: var(--accent); color: #111711; box-shadow: 0 14px 34px rgba(0,0,0,.3); cursor: pointer; }
+    .chat-launcher svg { width: 27px; height: 27px; }
+    .chat-launcher[aria-expanded="true"] { background: #f1cd69; }
+    .chat-panel { position: fixed; z-index: 61; right: 22px; bottom: 158px; width: min(380px, calc(100vw - 32px)); max-height: min(590px, calc(100vh - 190px)); display: none; grid-template-rows: auto minmax(170px, 1fr) auto; background: var(--surface); color: var(--ink); border: 1px solid var(--line); box-shadow: 0 24px 70px rgba(0,0,0,.34); }
+    .chat-panel.open { display: grid; }
+    .chat-head { padding: 1rem 1rem .9rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; background: var(--forest); color: #fff; }
+    .chat-head strong { display: block; }
+    .chat-head small { display: block; margin-top: .1rem; color: #c2cec7; }
+    .chat-close { width: 38px; height: 38px; border: 1px solid rgba(255,255,255,.35); background: transparent; color: #fff; cursor: pointer; font-size: 1.3rem; }
+    .chat-messages { padding: 1rem; overflow-y: auto; overscroll-behavior: contain; }
+    .chat-message { width: fit-content; max-width: 88%; margin: 0 0 .7rem; padding: .72rem .82rem; background: var(--surface-soft); font-size: .88rem; }
+    .chat-message.user { margin-left: auto; background: var(--accent); color: #111711; }
+    .quick-replies { margin: .1rem 0 .85rem; display: flex; flex-wrap: wrap; gap: .45rem; }
+    .quick-replies button { min-height: 38px; padding: .4rem .7rem; border: 1px solid var(--accent-dark); background: transparent; color: var(--ink); font-size: .78rem; font-weight: 800; cursor: pointer; }
+    .quick-replies button:hover, .quick-replies button:focus-visible { background: var(--surface-soft); }
+    .lead-form { margin-top: .35rem; padding: .8rem; border-top: 3px solid var(--accent); background: var(--surface-soft); }
+    .lead-form label { display: grid; gap: .25rem; margin-bottom: .55rem; font-size: .75rem; font-weight: 800; }
+    .lead-form input { width: 100%; min-height: 42px; padding: 0 .65rem; border: 1px solid var(--line); border-radius: 0; background: var(--surface); color: var(--ink); }
+    .lead-form button { width: 100%; min-height: 44px; border: 0; background: #187a45; color: #fff; font-weight: 800; cursor: pointer; }
+    .chat-compose { padding: .75rem; display: grid; grid-template-columns: 1fr auto; gap: .5rem; border-top: 1px solid var(--line); }
+    .chat-compose input { min-width: 0; min-height: 44px; padding: 0 .7rem; border: 1px solid var(--line); border-radius: 0; background: var(--paper); color: var(--ink); }
+    .chat-compose button { min-width: 62px; border: 0; background: var(--accent); color: #111711; font-weight: 800; cursor: pointer; }
+
+    .whatsapp-float { position: fixed; z-index: 35; right: 22px; bottom: 24px; min-height: 54px; padding: 0 1rem; display: inline-flex; align-items: center; gap: .65rem; background: #187a45; color: #fff; text-decoration: none; font-weight: 800; box-shadow: 0 14px 34px rgba(0,0,0,.26); }
+    .whatsapp-float:hover, .whatsapp-float:focus-visible { background: #116538; }
+    .whatsapp-float svg { width: 25px; height: 25px; }
+    .mobile-quote { display: none; }
+    :focus-visible { outline: 3px solid #f0c451; outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+    @media (max-width: 920px) {
+      .topline { display: none; }
+      .nav-wrap { min-height: 70px; padding: 0 20px; }
+      .menu-button { display: block; }
+      .nav-links { display: none; position: absolute; top: 70px; left: 0; right: 0; padding: 1rem 20px 1.4rem; background: var(--header); border-top: 1px solid rgba(255,255,255,.12); flex-direction: column; align-items: stretch; gap: 0; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: .75rem 0; }
+      .nav-links .header-call, .nav-links .quote-link { margin-top: .5rem; justify-content: center; }
+      .hero { min-height: 670px; }
+      .hero-inner { padding: 80px 20px 64px; grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-media { width: min(720px, 100%); justify-self: center; }
+      .proofbar-inner { grid-template-columns: 1fr; padding: .6rem 20px; }
+      .proof { min-height: 56px; padding: .45rem 0; justify-content: flex-start; }
+      .proof + .proof { border-left: 0; border-top: 1px solid rgba(17,23,17,.22); }
+      .proof strong { width: 120px; }
+      .section, .checker-inner { padding: 78px 20px; }
+      .section-head, .checker-inner, .quote-inner, .process-grid, .faq-grid, .commercial-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .quote-inner { padding: 78px 20px; }
+      .checker-copy, .process-copy { position: static; }
+      .checker-copy h2 { font-size: clamp(3.1rem, 9vw, 4.5rem); }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .why-item, .why-item:first-child { min-height: auto; padding: 1.6rem; }
+      .why-item:first-child { padding-left: 0; }
+      .why-item:nth-child(3) { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+      .why-item:nth-child(4) { border-top: 1px solid var(--line); }
+      .why-item h3 { margin-top: 1.4rem; }
+      .commercial-inner { padding: 72px 20px; }
+      .project-grid { grid-template-columns: 1fr; }
+      .article-grid { grid-template-columns: repeat(2, 1fr); }
+      .project-categories { grid-template-columns: repeat(2, 1fr); }
+      .cta-inner { grid-template-columns: 1fr; padding: 64px 20px; }
+      .cta-actions { min-width: 0; justify-items: start; text-align: left; }
+      .project, .project:first-child { min-height: 400px; grid-row: auto; }
+      .reviews-inner { grid-template-columns: 1fr; gap: 2rem; padding: 72px 20px; }
+      .contact-top { grid-template-columns: 1fr; align-items: start; }
+      .contact-actions { width: min(100%, 430px); }
+      .contact-details { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 620px) {
+      body { padding-bottom: 70px; }
+      .brand-copy small { display: none; }
+      h1 { order: 2; margin-top: 0; max-width: 100%; font-size: clamp(2.8rem, 12vw, 3.25rem); line-height: .91; }
+      .hero { min-height: 650px; }
+      .hero::after { background: linear-gradient(90deg, rgba(7,16,12,.94), rgba(7,16,12,.58)), linear-gradient(0deg, rgba(7,16,12,.78), transparent 60%); }
+      .hero-inner { padding-top: 54px; row-gap: 1.4rem; }
+      .hero-inner > div { display: contents; }
+      .hero .kicker { order: 1; }
+      .hero-media { order: 3; }
+      .hero-copy { order: 4; margin-top: 0; font-size: 1rem; }
+      .hero-scope { order: 5; margin-top: 0; }
+      .hero-actions { order: 6; margin-top: .3rem; display: grid; grid-template-columns: 1fr 1fr; width: 100%; }
+      .hero-actions .button { width: 100%; padding-inline: .65rem; font-size: .82rem; }
+      .button { width: 100%; }
+      .proof strong { width: 102px; font-size: 1.85rem; }
+      .section-head { margin-bottom: 2.3rem; }
+      .why-grid { grid-template-columns: 1fr; }
+      .why-item, .why-item:first-child, .why-item:nth-child(3) { padding: 1.5rem 0; border-left: 0; }
+      .why-item + .why-item { border-top: 1px solid var(--line); }
+      .service-list { grid-template-columns: 1fr; }
+      .service, .service:nth-child(even) { min-height: auto; padding: 1.5rem 0; border-left: 0; }
+      .service ul { display: grid; grid-template-columns: 1fr; }
+      .commercial-types { grid-template-columns: 1fr; }
+      .commercial-type, .commercial-type:first-child { padding: 1.2rem 0; }
+      .commercial-type + .commercial-type { border-left: 0; border-top: 1px solid #3d5147; }
+      .form-grid { grid-template-columns: 1fr; }
+      .choice-row { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .checker-card, .quote-panel { padding: 1.35rem; }
+      .contact-choice { grid-template-columns: 36px 1fr; padding-inline: .35rem; }
+      .contact-choice > span:last-child { display: none; }
+      .result .button { width: 100%; }
+      .project-categories { grid-template-columns: 1fr; }
+      .article-grid { grid-template-columns: 1fr; }
+      .article-card { min-height: auto; }
+      .article-reader-shell { width: 100%; }
+      .article-panel { padding: 42px 20px 88px; }
+      .project-category { min-height: auto; }
+      .project, .project:first-child { min-height: 330px; }
+      .project-info h3 { font-size: 1.75rem; }
+      .project-note { align-items: flex-start; flex-direction: column; }
+      .review-list { grid-template-columns: 1fr; }
+      .step { grid-template-columns: 48px 1fr; gap: .9rem; }
+      .contact-inner { padding: 72px 20px 36px; }
+      .contact-details { grid-template-columns: 1fr; }
+      .footer-line { display: block; }
+      .footer-line span { display: block; margin-top: .45rem; }
+      .whatsapp-float { display: none; }
+      .chat-launcher { right: 16px; bottom: 84px; width: 52px; height: 52px; }
+      .chat-panel { right: 8px; bottom: 144px; width: calc(100vw - 16px); max-height: min(560px, calc(100vh - 160px)); }
+      .contact-modal { align-items: end; padding: 0; }
+      .contact-modal-card { width: 100%; max-height: calc(100vh - 24px); padding: 1.5rem 20px max(1.5rem, env(safe-area-inset-bottom)); overflow-y: auto; transform: translateY(100%); }
+      .contact-modal.open .contact-modal-card { transform: translateY(0); }
+      .modal-actions { grid-template-columns: 1fr; }
+      .modal-actions a { min-height: 46px; }
+      .mobile-quote { position: fixed; z-index: 50; left: 0; right: auto; bottom: 0; width: 100%; min-height: 70px; padding: 7px 10px max(7px, env(safe-area-inset-bottom)); display: grid !important; grid-template-columns: repeat(3, 1fr); gap: 7px; align-items: stretch; background: var(--forest); box-shadow: 0 -8px 24px rgba(0,0,0,.24); }
+      .mobile-quote a { min-width: 0; padding: .45rem .3rem; display: grid; place-items: center; text-align: center; text-decoration: none; color: #fff; font-size: .72rem; font-weight: 800; line-height: 1.1; border: 1px solid rgba(255,255,255,.32); }
+      .mobile-quote a:last-child { background: var(--accent); border-color: var(--accent); color: #111711; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="topline">
+      <div class="topline-inner"><span>Serving Brampton / GTA and nearby areas</span><span class="topline-links"><a href="mailto:info@junejaconstruction.ca">Email (placeholder)</a><a href="tel:+16477018906">Call +1 647-701-8906</a></span></div>
+    </div>
+    <nav class="nav-wrap" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Juneja Construction home"><span class="brand-mark" aria-hidden="true">J</span><span class="brand-copy"><strong>Juneja Construction</strong><small>Renovation &amp; Construction Inc.</small></span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <div class="nav-links" id="nav-links">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#process">Process</a>
+        <a href="#articles">Articles</a>
+        <a href="#contact">Contact</a>
+        <a class="header-call" href="tel:+16477018906">Call now</a>
+        <a class="quote-link" href="#quote">Free Quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div>
+          <div class="kicker">Premium construction across the GTA</div>
+          <h1>Build better. Renovate beautifully.</h1>
+          <p class="hero-copy">From one-room upgrades to complete residential and commercial projects, Juneja brings thoughtful planning, skilled construction and polished finishes together. <strong>Start with a free, no-pressure quote.</strong></p>
+          <ul class="hero-scope" aria-label="Core services"><li>Home renovations</li><li>Kitchens</li><li>Bathrooms</li><li>Legal basements</li><li>Additions</li><li>Commercial work</li></ul>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#quote">Get a free quote</a>
+            <a class="button button-outline" href="tel:+16477018906">Call 647-701-8906</a>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <div class="video-label">Welcome · 41 seconds</div>
+          <video class="hero-video" id="welcome-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero.jpg" aria-label="Welcome video from Juneja Construction">
+            <!-- For the final client site, replace only this local source file with the client's permanent hosted video. -->
+            <source src="assets/juneja-construction-welcome.mp4" type="video/mp4" />
+          </video>
+          <button class="sound-toggle" id="sound-toggle" type="button" aria-label="Play welcome video with sound" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15 9a4 4 0 010 6M18 6a8 8 0 010 12"/></svg>
+            <span>Tap for sound</span>
+          </button>
+        </figure>
+      </div>
+    </section>
+
+    <div class="proofbar" aria-label="Juneja Construction highlights">
+      <div class="proofbar-inner">
+        <div class="proof"><strong>4.9★</strong><span>Google rating from 76 reviews</span></div>
+        <div class="proof"><strong>10</strong><span>Residential and commercial services</span></div>
+        <div class="proof"><strong>7 days</strong><span>Open Monday through Sunday</span></div>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="why-title">
+      <div class="section-head">
+        <div><div class="rule"></div><h2 id="why-title">Every detail earns your trust.</h2></div>
+        <p>A successful renovation should feel considered from the first conversation to the final walkthrough. Juneja brings code-conscious planning, modern design thinking and clear communication to every stage.</p>
+      </div>
+      <div class="why-grid">
+        <article class="why-item"><svg class="why-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M24 4l15 7v10c0 10-6.5 17-15 21C15.5 38 9 31 9 21V11l15-7z"/><path d="M16 23l5 5 11-12"/></svg><h3>Respect for budget</h3><p>Scope and selections are discussed clearly so decisions stay connected to your priorities and budget.</p></article>
+        <article class="why-item"><svg class="why-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M24 14v11l7 4"/></svg><h3>Reliable timelines</h3><p>Milestones, trade sequencing and updates keep the work moving toward an on-time handover.</p></article>
+        <article class="why-item"><svg class="why-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M7 41h34M10 41V21l14-11 14 11v20M17 41V28h14v13M8 22h32"/></svg><h3>Modern methods</h3><p>Current materials, practical building techniques and thoughtful finishes create spaces designed to last.</p></article>
+        <article class="why-item"><svg class="why-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M10 9h28v30H10zM16 16h16M16 23h16M16 30h10"/><path d="M35 36l6 6"/></svg><h3>Clean, respectful work</h3><p>Your property is treated with care, with organized work areas and direct communication throughout.</p></article>
+      </div>
+    </section>
+
+    <section class="services-section" id="services">
+      <div class="section">
+        <div class="section-head"><div><div class="rule"></div><h2>Complete renovation expertise.</h2></div><p>Modern design, premium materials and practical construction for residential and commercial properties across Brampton / GTA and nearby areas.</p></div>
+        <div class="service-list">
+          <article class="service"><span class="service-num">01</span><div><h3>Legal basements</h3><p>Rental or family suites planned around safety, comfort, approvals and everyday function.</p><ul><li>Insulation &amp; ventilation</li><li>Fire-safety planning</li><li>Egress &amp; entrance options</li><li>Kitchen, bath &amp; laundry</li></ul></div></article>
+          <article class="service"><span class="service-num">02</span><div><h3>House renovation</h3><p>Personalized whole-home updates that improve flow, comfort and long-term property value.</p><ul><li>Layout updates</li><li>Flooring &amp; trim</li><li>Lighting</li><li>Interior finishing</li></ul></div></article>
+          <article class="service"><span class="service-num">03</span><div><h3>Kitchen remodel</h3><p>Modern kitchens shaped around cooking, storage, gathering and the character of your home.</p><ul><li>Custom cabinetry</li><li>Quartz or granite counters</li><li>Backsplashes</li><li>Smart lighting</li></ul></div></article>
+          <article class="service"><span class="service-num">04</span><div><h3>Bathroom remodel</h3><p>Durable, carefully finished bathrooms with practical layouts and refined material choices.</p><ul><li>Walk-in showers</li><li>Frameless glass</li><li>Custom vanities</li><li>Waterproofing</li></ul></div></article>
+          <article class="service"><span class="service-num">05</span><div><h3>Below-grade entrances</h3><p>Purpose-planned access for basement spaces, coordinated with grading, drainage and the wider suite layout.</p><ul><li>Entrance planning</li><li>Stairs &amp; landings</li><li>Drainage review</li><li>Code considerations</li></ul></div></article>
+          <article class="service"><span class="service-num">06</span><div><h3>Concrete work</h3><p>Functional exterior concrete work that supports entrances, walkways and everyday access.</p><ul><li>Walkways</li><li>Landings</li><li>Steps</li><li>Site finishing</li></ul></div></article>
+          <article class="service"><span class="service-num">07</span><div><h3>Deck &amp; fence</h3><p>Outdoor improvements designed for privacy, safer access and more usable living space.</p><ul><li>Deck construction</li><li>Fence installation</li><li>Railings</li><li>Exterior finishing</li></ul></div></article>
+          <article class="service"><span class="service-num">08</span><div><h3>Basement waterproofing</h3><p>Moisture-control work that helps protect the basement before valuable interior finishes go in.</p><ul><li>Water-entry review</li><li>Drainage considerations</li><li>Foundation protection</li><li>Interior readiness</li></ul></div></article>
+          <article class="service"><span class="service-num">09</span><div><h3>Additions &amp; accessory spaces</h3><p>Thoughtful new spaces and functional structures planned to complement the property and how it is used.</p><ul><li>Home additions</li><li>Space planning</li><li>Structure coordination</li><li>Exterior finishes</li></ul></div></article>
+          <article class="service"><span class="service-num">10</span><div><h3>Commercial renovation</h3><p>Customer-facing and workplace interiors built around operations, presentation and durable finishes.</p><ul><li>Retail fit-outs</li><li>Restaurants</li><li>Offices</li><li>Commercial interiors</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="commercial-band" aria-labelledby="commercial-title">
+      <div class="commercial-inner">
+        <div class="commercial-copy"><div class="rule"></div><h2 id="commercial-title">Commercial spaces that work harder.</h2><p>Juneja Construction brings the same detail-led approach to business environments, coordinating layout, finishes and site execution around the way your team and customers use the space.</p></div>
+        <div class="commercial-types"><article class="commercial-type"><h3>Retail</h3><p>Storefronts, displays, counters and durable customer-facing finishes.</p></article><article class="commercial-type"><h3>Restaurants</h3><p>Thoughtful front- and back-of-house upgrades for demanding daily use.</p></article><article class="commercial-type"><h3>Offices</h3><p>Modern workspaces with practical circulation, lighting and finish coordination.</p></article></div>
+      </div>
+    </section>
+
+    <section class="quote-section" id="quote">
+      <div class="quote-inner">
+        <div class="quote-copy"><div class="rule"></div><h2>Tell us what you’re building.</h2><p>Every strong project starts with a clear conversation. Share the space, your goals and your preferred timeline, and Juneja Construction can help define the right next step.</p><p class="service-line">Home renovations · Kitchens · Bathrooms · Legal basements · Additions · Commercial work</p></div>
+        <div class="quote-panel">
+          <h3>Start your free quote</h3>
+          <p>Choose the easiest way to connect directly—no long form and no obligation.</p>
+          <a class="contact-choice" href="tel:+16477018906"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 3h3l1.5 4-2 1.5a16 16 0 006 6l1.5-2L21 14v3c0 2.2-1.8 4-4 4C9.3 21 3 14.7 3 7c0-2.2 1.8-4 4-4z"/></svg><span><strong>Call now</strong><small>+1 647-701-8906</small></span><span>Call →</span></a>
+          <a class="contact-choice" href="https://wa.me/16477018906?text=Hi%20Juneja%20Construction%2C%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.5a8.5 8.5 0 01-12.6 7.45L3 20l1.1-4.1A8.5 8.5 0 1120 11.5z"/><path d="M8.2 7.8c.4 3.3 2.7 5.6 6 6l1.1-1.7 2.1.8c-.1 1.8-1.4 3.1-3.2 3.1-4.5 0-8.2-3.7-8.2-8.2 0-1.8 1.3-3.1 3.1-3.2l.8 2.1-1.7 1.1z"/></svg><span><strong>Chat on WhatsApp</strong><small>Greeting message ready to send</small></span><span>Chat →</span></a>
+          <!-- Placeholder email: replace this mailto address and visible text once the client confirms the real inbox. -->
+          <a class="contact-choice" href="mailto:info@junejaconstruction.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 5h18v14H3z"/><path d="M3 7l9 7 9-7"/></svg><span><strong>Email (placeholder)</strong><small>info@junejaconstruction.ca</small></span><span>Email →</span></a>
+          <p class="placeholder-note"><strong>Placeholder:</strong> confirm the client’s real email before launch; this address is intentionally easy to replace.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="section">
+        <div class="section-head"><div><div class="rule"></div><h2>Spaces built for living and working.</h2></div><p>Explore the range of residential and commercial projects Juneja Construction takes on. The images below are sample concepts; visit Instagram for real company project photos.</p></div>
+        <div class="project-categories" aria-label="Project categories">
+          <article class="project-category"><span>01</span><h3>Basements</h3><p>Legal suites and personal spaces shaped around comfort, safety and useful layouts.</p></article>
+          <article class="project-category"><span>02</span><h3>Kitchens</h3><p>Modern cabinetry, durable surfaces, improved lighting and better everyday flow.</p></article>
+          <article class="project-category"><span>03</span><h3>Bathrooms</h3><p>Waterproofed, carefully tiled spaces with showers, vanities and refined fixtures.</p></article>
+          <article class="project-category"><span>04</span><h3>Deck &amp; fence</h3><p>Outdoor structures that add privacy, function and a more finished property edge.</p></article>
+          <article class="project-category"><span>05</span><h3>Entrances</h3><p>Below-grade access planned with stairs, drainage and basement circulation in mind.</p></article>
+          <article class="project-category"><span>06</span><h3>Commercial</h3><p>Retail, restaurant and office interiors designed for business and customer needs.</p></article>
+        </div>
+        <div class="project-grid">
+          <article class="project"><img src="assets/residential.jpg" alt="Sample concept of a modern renovated residence" /><div class="project-info"><span>Residential · Sample concept</span><h3>Whole-home renovation</h3></div></article>
+          <article class="project"><img src="assets/interior.jpg" alt="Sample concept of a bright kitchen renovation" /><div class="project-info"><span>Interior · Sample concept</span><h3>Kitchen transformation</h3></div></article>
+          <article class="project"><img src="assets/commercial.jpg" alt="Sample concept of a renovated commercial storefront" /><div class="project-info"><span>Commercial · Sample concept</span><h3>Retail fit-out</h3></div></article>
+        </div>
+        <div class="project-note"><p>Want to see current, real job-site photos and recent project updates?</p><a class="text-link" href="https://www.instagram.com/juneja_construction_inc" target="_blank" rel="noopener noreferrer">View Juneja on Instagram ↗</a></div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="process-grid">
+        <div class="process-copy"><div class="rule"></div><h2>From first idea to final finish.</h2><p>A structured, transparent process keeps scope, design choices, materials, construction milestones and communication aligned from start to handover.</p></div>
+        <div class="steps">
+          <article class="step"><span class="step-num">1</span><div><h3>Free consultation</h3><p>Discuss your property, goals, budget, timeline and the kind of personalized space you want to create.</p></div></article>
+          <article class="step"><span class="step-num">2</span><div><h3>Site assessment &amp; design</h3><p>Review dimensions, access and utilities, then shape a practical layout and clear project scope.</p></div></article>
+          <article class="step"><span class="step-num">3</span><div><h3>Permits, drawings &amp; selections</h3><p>Coordinate the approval path and choose materials and finishes before construction moves ahead.</p></div></article>
+          <article class="step"><span class="step-num">4</span><div><h3>Construction &amp; finishing</h3><p>Sequence the trades, keep the site organized and provide regular updates as the work progresses.</p></div></article>
+          <article class="step"><span class="step-num">5</span><div><h3>Inspection &amp; on-time handover</h3><p>Complete required inspections, walk through the finished work and close out the project with care.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" aria-labelledby="reviews-title">
+      <div class="reviews-inner">
+        <div><p class="kicker" style="color:#111711">4.9 Google rating · 76 reviews</p><h2 id="reviews-title">Trusted by GTA homeowners.</h2></div>
+        <div class="review-list">
+          <blockquote><p>“The basement project was handled with reliable communication and neat, professional work. The team made the process easy to follow.”</p><footer>— Aditi M.<span>Google reviewer</span></footer></blockquote>
+          <blockquote><p>“From permits through finishing, the work stayed organized and on time. The quality, transparency and communication stood out.”</p><footer>— Sakattar Singh<span>Google reviewer</span></footer></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="start-title">
+      <div class="cta-inner"><div><div class="rule"></div><h2 id="start-title">Let’s bring your project to life.</h2><p>Whether you are planning a home renovation, kitchen, bathroom, legal basement, addition or commercial space, start with a free conversation.</p></div><div class="cta-actions"><a class="button button-primary" href="#quote">Get Free Quote</a><a href="tel:+16477018906">Call +1 647-701-8906</a></div></div>
+    </section>
+
+
+    <section class="articles-section" id="articles" aria-labelledby="articles-title">
+      <div class="section">
+        <div class="section-head"><div><div class="rule"></div><h2 id="articles-title">Knowledge Corner.</h2></div><p>Practical explainers on construction, the housing market, government policy and design—written to help GTA property owners plan with clearer questions.</p></div>
+        <div class="article-categories" aria-label="Article categories"><span>Construction</span><span>Housing Market</span><span>Government Policies</span><span>Design Trends</span></div>
+        <!-- ARTICLE TEMPLATE: duplicate one .article-card and its matching .article-panel; keep a unique slug, title, 150–160 character description, date, H1/H2 structure, FAQ and quote CTA. Add matching Article JSON-LD below. -->
+        <div class="article-grid"><article class="article-card"><img class="article-card-thumb" src="assets/articles/housing-construction.jpg" alt="Canadian apartment construction site with tower cranes representing the 2026 housing supply push" loading="lazy" /><div class="article-meta"><span>Government Policies</span><time datetime="2026-10-07">October 7, 2026</time></div><h3>Canada’s 2026 Housing Push: What Builders Should Know</h3><p>Canada 2026 housing update: low-cost rental loans, skilled-trades funding, regulation reform and modular construction priorities for GTA property owners.</p><a href="#articles/spring-economic-update-2026-housing" data-article-open="spring-economic-update-2026-housing">Read article →</a></article><article class="article-card"><img class="article-card-thumb" src="assets/articles/new-homes.jpg" alt="New Ontario homes under construction during the 2026 HST relief eligibility period" loading="lazy" /><div class="article-meta"><span>Government Policies</span><time datetime="2026-10-06">October 6, 2026</time></div><h3>Ontario’s 2026 HST Relief for Eligible New Homes</h3><p>Ontario and federal 2026 new-home measures explained: full HST relief for eligible homes, potential savings up to $130,000 and development charge cuts.</p><a href="#articles/ontario-hst-relief-new-homes-2026" data-article-open="ontario-hst-relief-new-homes-2026">Read article →</a></article><article class="article-card"><img class="article-card-thumb" src="assets/articles/design-catalogue.jpg" alt="Low-rise Canadian housing illustrating gentle density and catalogue home design principles" loading="lazy" /><div class="article-meta"><span>Design Trends</span><time datetime="2026-10-05">October 5, 2026</time></div><h3>Canada’s Housing Design Catalogue: A Practical Guide</h3><p>Explore Canada’s Housing Design Catalogue with 50+ free pre-approved low-rise designs and what gentle density can mean for smarter property planning now.</p><a href="#articles/canada-housing-design-catalogue-guide" data-article-open="canada-housing-design-catalogue-guide">Read article →</a></article><article class="article-card"><img class="article-card-thumb" src="assets/articles/legal-basement.jpg" alt="Finished basement interior illustrating legal basement planning under the Ontario Building Code" loading="lazy" /><div class="article-meta"><span>Construction</span><time datetime="2026-10-04">October 4, 2026</time></div><h3>Legal Basements and Ontario’s 2024 Building Code</h3><p>Plan a legal basement under Ontario’s mandatory 2024 Building Code: 1.95 m ceiling, egress windows, fire separation, permits and clearer project steps.</p><a href="#articles/ontario-building-code-legal-basement-2026" data-article-open="ontario-building-code-legal-basement-2026">Read article →</a></article><article class="article-card"><img class="article-card-thumb" src="assets/articles/gta-home.jpg" alt="Contemporary renovated Toronto home exterior for a 2026 renovate-versus-move comparison" loading="lazy" /><div class="article-meta"><span>Housing Market</span><time datetime="2026-10-03">October 3, 2026</time></div><h3>GTA Home Prices: Renovate or Move in 2026?</h3><p>TRREB’s August 2026 GTA average price was $993,410, down 2.7% year over year. Use this market snapshot to compare renovating with moving wisely today.</p><a href="#articles/gta-market-august-2026-renovate-or-move" data-article-open="gta-market-august-2026-renovate-or-move">Read article →</a></article><article class="article-card"><img class="article-card-thumb" src="assets/articles/zoning-apartments.jpg" alt="Mid-rise apartment construction illustrating Ontario zoning and six-storey housing proposals" loading="lazy" /><div class="article-meta"><span>Government Policies</span><time datetime="2026-10-02">October 2, 2026</time></div><h3>Ontario Zoning and Single-Stair Housing Ideas</h3><p>Toronto Board of Trade’s October 2026 proposal: a provincial zoning code and single-stair buildings up to six storeys, with useful context for owners.</p><a href="#articles/ontario-zoning-single-stair-six-storeys" data-article-open="ontario-zoning-single-stair-six-storeys">Read article →</a></article><article class="article-card"><img class="article-card-thumb" src="assets/articles/modular-home.webp" alt="Modular home components being assembled in a factory-built construction process" loading="lazy" /><div class="article-meta"><span>Construction</span><time datetime="2026-10-01">October 1, 2026</time></div><h3>Modular Homes in Canada: The 2026 Opportunity</h3><p>Modular and factory-built housing is part of Canada’s 2026 housing push. Learn what repeatable production can offer and what still needs site planning.</p><a href="#articles/modular-factory-built-homes-canada-2026" data-article-open="modular-factory-built-homes-canada-2026">Read article →</a></article><article class="article-card"><img class="article-card-thumb" src="assets/articles/kitchen-design.jpg" alt="Premium renovated kitchen with layered lighting and durable finishes for 2026 GTA design planning" loading="lazy" /><div class="article-meta"><span>Design Trends</span><time datetime="2026-09-30">September 30, 2026</time></div><h3>2026 GTA Kitchen and Bathroom Design Planning</h3><p>A practical 2026 GTA guide to kitchen and bathroom design: improve layout, storage, lighting, waterproofing and durable finishes before selecting styles.</p><a href="#articles/gta-kitchen-bathroom-design-trends-2026" data-article-open="gta-kitchen-bathroom-design-trends-2026">Read article →</a></article></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="faq-grid">
+        <div><div class="rule"></div><h2 id="faq-title">Questions before you build.</h2></div>
+        <div class="faq-list">
+          <div class="faq-item"><button class="faq-button" type="button" aria-expanded="false"><span>What kinds of projects does Juneja Construction take on?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-answer"><div><p>Juneja works across home renovations, kitchens, bathrooms, legal basements, below-grade entrances, concrete, decks, fences, additions, accessory structures and commercial interiors.</p></div></div></div>
+          <div class="faq-item"><button class="faq-button" type="button" aria-expanded="false"><span>How do I get a free quote?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-answer"><div><p>Call or send a WhatsApp message with your project type, location and preferred timeline. Juneja can then arrange the right next step, including a site discussion when needed.</p></div></div></div>
+          <div class="faq-item"><button class="faq-button" type="button" aria-expanded="false"><span>How long does a renovation or construction project take?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-answer"><div><p>Timing varies with project scope, drawings, permits, inspections, material selections and site conditions. A consultation and site assessment are the right starting points for a realistic schedule.</p></div></div></div>
+          <div class="faq-item"><button class="faq-button" type="button" aria-expanded="false"><span>Do you handle permits and drawings?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-answer"><div><p>Juneja positions its service from permits to finish. Call for a free assessment of the drawings, permits and approvals your specific project may require.</p></div></div></div>
+          <div class="faq-item"><button class="faq-button" type="button" aria-expanded="false"><span>Which areas do you serve?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-answer"><div><p>Brampton / GTA and nearby areas.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-top"><div class="contact-copy"><div class="rule"></div><h2>Let’s talk about your project.</h2><p>Start with a free estimate and a straightforward conversation about your space, priorities, budget and next steps.</p></div><div class="contact-actions"><a class="button button-primary" href="tel:+16477018906">Call +1 647-701-8906</a><a class="button button-outline" href="https://wa.me/16477018906?text=Hi%20Juneja%20Construction%2C%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener noreferrer">WhatsApp for a free quote</a><a class="button button-outline" href="mailto:info@junejaconstruction.ca">Email (placeholder)</a></div></div>
+      <div class="contact-details">
+        <div class="contact-item"><small>Visit</small><strong>27 Lent Crescent<br />Brampton, ON L6Y 5E5</strong></div>
+        <div class="contact-item"><small>Call</small><a href="tel:+16477018906">+1 647-701-8906</a></div>
+        <div class="contact-item"><small>Email · placeholder</small><a href="mailto:info@junejaconstruction.ca">info@junejaconstruction.ca</a></div>
+        <div class="contact-item"><small>Hours</small><strong>Monday–Sunday<br />8:00 AM–11:00 PM</strong></div>
+        <div class="contact-item"><small>Service area</small><strong>Brampton / GTA and nearby areas</strong></div>
+      </div>
+      <div class="footer-line"><strong>Juneja Renovation &amp; Construction Inc.</strong><span>Residential &amp; commercial · From permits to finish</span></div>
+    </div>
+  </footer>
+
+
+  <div class="article-reader" id="article-reader" aria-hidden="true">
+    <div class="article-reader-shell" role="dialog" aria-modal="true" aria-label="Knowledge Corner article">
+      <div class="article-reader-top"><strong>Juneja Construction · Knowledge Corner</strong><button class="article-reader-close" id="article-reader-close" type="button" aria-label="Close article">×</button></div>
+      <article class="article-panel" id="article-spring-economic-update-2026-housing" data-slug="spring-economic-update-2026-housing" data-meta-title="Canada’s 2026 Housing Push: What Builders Should Know" data-meta-description="Canada 2026 housing update: low-cost rental loans, skilled-trades funding, regulation reform and modular construction priorities for GTA property owners."><div class="article-meta">Government Policies · Published October 7, 2026</div><h1>Canada’s 2026 Housing Push: What Builders Should Know</h1><img class="article-hero-image" src="assets/articles/housing-construction.jpg" alt="Canadian apartment construction site with tower cranes representing the 2026 housing supply push" /><p class="dek">Canada’s Spring Economic Update 2026 puts housing delivery, construction capacity and faster approvals in the same policy frame. For property owners, the practical lesson is simple: good projects still begin with a clear scope, a buildable design and an early conversation about approvals.</p>
+<h2>Three measures shaping the construction conversation</h2>
+<p>The update fast-tracks more than $7 billion in low-cost loans through the Apartment Construction Loan Program, with support described for up to 16,500 rental homes. That measure is aimed at larger rental supply, but it matters beyond apartment developers. More rental construction can affect trade demand, material scheduling and the pace at which municipalities review housing-related work.</p>
+<p>A separate $6 billion skilled-trades workforce commitment focuses attention on the people required to turn plans into finished homes. Funding does not remove the need for careful project coordination. Homeowners comparing a <a href="#services">renovation, legal basement, kitchen or bathroom project</a> should still ask who will manage the sequence of trades and how decisions will be documented.</p>
+<p>The update also includes $41.9 million for homebuilding regulation modernization and a push toward modular and factory-built housing. These are connected ideas: repeatable designs and clearer rules can reduce avoidable friction, but every site still has its own access, dimensions, servicing and local approval context.</p>
+<h2>What this means for a GTA property owner</h2>
+<p>Policy announcements can make housing construction sound immediate. In practice, an individual project moves through a smaller set of decisions: what the space must do, what the property can support, what approvals may apply, what materials fit the budget and how the work will be sequenced. Starting with those questions protects the project from becoming a reaction to a headline.</p>
+<p>For a homeowner, the federal rental-loan program is not a promise that a basement conversion or addition qualifies for financing. The safer interpretation is that rental supply and construction capacity are national priorities. If you are exploring an income-supporting space, begin with a site assessment and permit conversation rather than assuming a program applies.</p>
+<img class="article-inline-image" src="assets/articles/modular-home.webp" alt="Factory-built modular housing assembly illustrating Canada’s modular construction priority" loading="lazy" /><p class="article-image-caption">Project planning is strongest when design, site conditions and construction details are considered together.</p><h2>Plan for buildability, not just possibility</h2>
+<p>A useful consultation should connect design ambition to real conditions. Bring the property address, photos, rough measurements, desired use, preferred timeline and a working budget range. Ask whether the concept affects structure, plumbing, ventilation, fire separation, entrances or exterior work. Those details shape the sequence long before finishes are selected.</p>
+<p>Juneja Construction’s service mix covers <a href="#services">whole-home renovation, legal basements, additions and commercial interiors</a>. That range makes the first conversation especially important: the goal is to identify the correct project path, not force every idea into one category.</p>
+<h2>Prepare for a clearer first conversation</h2><p>Before requesting a quote, collect a short project brief, current photos and approximate room dimensions. Record the desired use, the problems that need solving, your preferred timing and a realistic budget boundary. Note any visible utilities, access limitations or previous alterations. This preparation does not replace a site assessment, but it helps the contractor understand priorities and identify the questions that must be answered next.</p><p>Keep policy, financing and tax questions separate from construction assumptions. Confirm official eligibility through the responsible program or adviser, while using the construction consultation to define scope, sequencing and site realities. Clear responsibilities at the beginning make later decisions easier to compare.</p><h2>FAQ</h2><div class="article-faq"><h3>Does the update guarantee a loan for my renovation?</h3><p>No. The verified announcement concerns more than $7 billion in low-cost loans through the Apartment Construction Loan Program. Eligibility for a specific property or project must be checked through the relevant program.</p><h3>Will regulation modernization remove permits?</h3><p>The update includes $41.9 million for modernization, but that does not mean local permit requirements disappear. Confirm the approval path for the property and scope.</p><h3>How should I respond to these policy changes?</h3><p>Use them as context, then focus on a site-specific plan. A clear scope, drawings where needed and a realistic construction sequence remain the foundation of a sound project.</p></div><div class="article-cta"><h2>Planning a project?</h2><p>Discuss your space, priorities and preferred timeline with Juneja Construction.</p><a class="button button-primary" href="#quote">Get Your Free Quote</a></div></article><article class="article-panel" id="article-ontario-hst-relief-new-homes-2026" data-slug="ontario-hst-relief-new-homes-2026" data-meta-title="Ontario’s 2026 HST Relief for Eligible New Homes" data-meta-description="Ontario and federal 2026 new-home measures explained: full HST relief for eligible homes, potential savings up to $130,000 and development charge cuts."><div class="article-meta">Government Policies · Published October 6, 2026</div><h1>Ontario’s 2026 HST Relief for Eligible New Homes</h1><img class="article-hero-image" src="assets/articles/new-homes.jpg" alt="New Ontario homes under construction during the 2026 HST relief eligibility period" /><p class="dek">A March 2026 Ontario–federal agreement created a defined window for significant new-home relief. The headline is compelling, but owners and builders should separate verified program facts from assumptions about a specific purchase or construction project.</p>
+<h2>The verified relief window</h2>
+<p>The agreement provides full HST relief on eligible new homes from April 1, 2026 through March 31, 2027, with potential savings of up to $130,000. The Development Charge Reduction Program adds a 30–50% cut in development charges. Those figures describe the announced programs; they do not establish that every home, buyer or project qualifies.</p>
+<p>Dates matter. “Eligible new homes” is a narrower phrase than “any residential work.” A kitchen remodel, bathroom refresh, basement renovation or repair should not be presented as automatically receiving the same relief. Before making a financial decision, owners should verify eligibility through the official program and their qualified advisers.</p>
+<h2>New construction and renovation are different decisions</h2>
+<p>Tax relief can improve the economics of an eligible new home, while renovation can improve how an existing property functions. Neither choice is universally better. The right comparison considers the existing home’s layout, condition, location, the family’s needs, project timing and the total cost of changing properties versus improving the one already owned.</p>
+<p>If the main problems are storage, circulation, an outdated kitchen, a tired bathroom or unused lower-level space, a focused <a href="#services">renovation plan</a> may address them without a move. If the project requires a fundamentally different footprint, an addition or new-home path may deserve a closer look.</p>
+<img class="article-inline-image" src="assets/articles/gta-home.jpg" alt="Renovated GTA home exterior for comparing new construction and renovation options" loading="lazy" /><p class="article-image-caption">Project planning is strongest when design, site conditions and construction details are considered together.</p><h2>Questions to bring to a project consultation</h2>
+<p>Start by defining the outcome rather than naming a product. Do you need another bedroom, a more functional kitchen, safer access, an additional bathroom or a separate living area? Then document the existing conditions. Photos and measurements help, but a site review is what connects the idea to structure, utilities and construction sequencing.</p>
+<p>For an addition or major renovation, ask which decisions must come before pricing can be dependable. The answer may include layout, drawings, permit requirements, material level and site access. For a new-home incentive, ask a tax or program professional to confirm the relief separately. Keeping construction scope and incentive eligibility as two clear workstreams reduces confusion.</p>
+<h2>A practical planning sequence</h2>
+<p>First, write a one-page project brief with needs, priorities and budget boundaries. Second, review the property and identify approval questions. Third, develop a scope that distinguishes essential work from optional upgrades. Fourth, compare the full project path, including selections and schedule, rather than comparing only a headline incentive with an early renovation estimate.</p>
+<p>Juneja Construction can discuss <a href="#services">renovations, kitchens, bathrooms, legal basements and additions</a> across Brampton / GTA and nearby areas. The conversation is about the construction scope; program and tax eligibility should be confirmed through the responsible authorities.</p>
+<h2>Prepare for a clearer first conversation</h2><p>Before requesting a quote, collect a short project brief, current photos and approximate room dimensions. Record the desired use, the problems that need solving, your preferred timing and a realistic budget boundary. Note any visible utilities, access limitations or previous alterations. This preparation does not replace a site assessment, but it helps the contractor understand priorities and identify the questions that must be answered next.</p><p>Keep policy, financing and tax questions separate from construction assumptions. Confirm official eligibility through the responsible program or adviser, while using the construction consultation to define scope, sequencing and site realities. Clear responsibilities at the beginning make later decisions easier to compare.</p><h2>FAQ</h2><div class="article-faq"><h3>How much can the HST relief save?</h3><p>The verified announcement says full HST relief for eligible new homes can provide savings of up to $130,000 during the April 1, 2026 to March 31, 2027 window.</p><h3>What is the development charge reduction?</h3><p>The announced Development Charge Reduction Program provides a 30–50% cut. Eligibility and the amount for a particular project must be confirmed.</p><h3>Does a renovation qualify?</h3><p>The supplied verified point is for eligible new homes. Do not assume a renovation qualifies. Check the official rules for the exact property and work.</p></div><div class="article-cta"><h2>Planning a project?</h2><p>Discuss your space, priorities and preferred timeline with Juneja Construction.</p><a class="button button-primary" href="#quote">Get Your Free Quote</a></div></article><article class="article-panel" id="article-canada-housing-design-catalogue-guide" data-slug="canada-housing-design-catalogue-guide" data-meta-title="Canada’s Housing Design Catalogue: A Practical Guide" data-meta-description="Explore Canada’s Housing Design Catalogue with 50+ free pre-approved low-rise designs and what gentle density can mean for smarter property planning now."><div class="article-meta">Design Trends · Published October 5, 2026</div><h1>Canada’s Housing Design Catalogue: A Practical Guide</h1><img class="article-hero-image" src="assets/articles/design-catalogue.jpg" alt="Low-rise Canadian housing illustrating gentle density and catalogue home design principles" /><p class="dek">Canada’s Housing Design Catalogue offers more than 50 free, pre-approved low-rise home designs. It also advances the idea of gentle density: adding housing in forms that fit within established neighbourhood patterns rather than relying only on large towers.</p>
+<h2>What the catalogue changes</h2>
+<p>A reusable design catalogue can reduce the effort required to begin from a blank page. Standardized concepts make it easier to discuss layouts, massing and repeatable construction approaches. “Pre-approved,” however, should not be read as “automatically approved on every lot.” The property, local rules, servicing and site conditions still matter.</p>
+<p>The catalogue is most useful as a starting point. Owners can review the design logic, identify the type of space they need and bring clearer questions into an early consultation. A design may be free to access while adaptation, drawings, permits, site work and construction remain separate parts of a real project.</p>
+<h2>Gentle density in plain language</h2>
+<p>Gentle density focuses on adding homes at a smaller scale. For an owner, that may prompt questions about how an existing property could support more useful space. Those questions can include a legal basement, an addition or another low-rise configuration, but no single option should be assumed feasible without a site-specific review.</p>
+<p>The right first question is not “Which catalogue plan should I choose?” It is “What can this property safely and lawfully support?” From there, compare access, privacy, natural light, servicing, parking needs, exterior relationships and the way the space will be used.</p>
+<img class="article-inline-image" src="assets/articles/new-homes.jpg" alt="Ontario low-rise homes showing how repeatable housing designs meet real neighbourhood sites" loading="lazy" /><p class="article-image-caption">Project planning is strongest when design, site conditions and construction details are considered together.</p><h2>How to review a catalogue design</h2>
+<p>Begin with function. Count the rooms, but also trace everyday movement through the plan. Look at entry points, storage, kitchen work zones, bathroom access and the relationship between private and shared areas. Then consider whether the design expects a different lot width, orientation or grade than your property provides.</p>
+<p>Next, separate the reusable idea from the site-specific work. A plan may offer a strong baseline, while structural, mechanical, electrical, plumbing and exterior details require coordination for the actual property. Material choices and finishes also change budget and construction timing.</p>
+<h2>Where renovation fits</h2>
+<p>A catalogue can inspire new housing, but an existing home may already contain the bones of the needed solution. Reworking a floor plan, improving a <a href="#services">kitchen or bathroom</a>, finishing a basement or planning an addition can sometimes meet the same functional goal with a different construction path.</p>
+<p>Use the catalogue as one comparison point, not as the conclusion. Bring the preferred design and a description of what you like about it to a project conversation. That makes it easier to determine whether the best answer is adaptation, renovation or a different low-rise concept.</p>
+<h2>Prepare for a clearer first conversation</h2><p>Before requesting a quote, collect a short project brief, current photos and approximate room dimensions. Record the desired use, the problems that need solving, your preferred timing and a realistic budget boundary. Note any visible utilities, access limitations or previous alterations. This preparation does not replace a site assessment, but it helps the contractor understand priorities and identify the questions that must be answered next.</p><p>Keep policy, financing and tax questions separate from construction assumptions. Confirm official eligibility through the responsible program or adviser, while using the construction consultation to define scope, sequencing and site realities. Clear responsibilities at the beginning make later decisions easier to compare.</p><h2>FAQ</h2><div class="article-faq"><h3>How many designs are in the catalogue?</h3><p>The verified Housing Design Catalogue point describes more than 50 free, pre-approved low-rise home designs.</p><h3>Does pre-approved mean no permit is needed?</h3><p>No such conclusion should be assumed. A specific lot, municipality and scope can still require review and permits. Confirm the local path before proceeding.</p><h3>Can I use a catalogue plan for a renovation?</h3><p>The catalogue can provide layout ideas, but an existing building has its own structure and services. A site-specific renovation plan is still needed.</p></div><div class="article-cta"><h2>Planning a project?</h2><p>Discuss your space, priorities and preferred timeline with Juneja Construction.</p><a class="button button-primary" href="#quote">Get Your Free Quote</a></div></article><article class="article-panel" id="article-ontario-building-code-legal-basement-2026" data-slug="ontario-building-code-legal-basement-2026" data-meta-title="Legal Basements and Ontario’s 2024 Building Code" data-meta-description="Plan a legal basement under Ontario’s mandatory 2024 Building Code: 1.95 m ceiling, egress windows, fire separation, permits and clearer project steps."><div class="article-meta">Construction · Published October 4, 2026</div><h1>Legal Basements and Ontario’s 2024 Building Code</h1><img class="article-hero-image" src="assets/articles/legal-basement.jpg" alt="Finished basement interior illustrating legal basement planning under the Ontario Building Code" /><p class="dek">Ontario’s 2024 Building Code became mandatory on January 1, 2025. For homeowners considering a legal basement, the verified essentials include a minimum 1.95-metre ceiling, egress windows, fire separation and permits.</p>
+<h2>Why the code belongs at the start</h2>
+<p>A basement design should not begin with flooring colours or cabinet doors. It should begin with the existing conditions and the requirements that affect safety and legality. Ceiling height, window openings, exits, fire separation and the approval process can shape the layout before finishes are considered.</p>
+<p>The 1.95-metre minimum ceiling is a clear screening point, but one number does not settle the full design. Beams, ducts, plumbing and other obstructions can affect usable height in different areas. Measure carefully and review the whole space rather than relying on one open spot.</p>
+<h2>Egress and fire separation</h2>
+<p>Egress windows provide an emergency escape route. Their location and the surrounding conditions must be treated as part of the plan, not as a decorative window upgrade. A proposed bedroom layout that ignores egress can create expensive redesign later.</p>
+<p>Fire separation is equally fundamental. The legal-basement concept must account for separation between spaces and how doors, walls, ceilings and service penetrations are handled. The detailed solution belongs in the permit and construction process. A visual renovation plan alone is not enough.</p>
+<img class="article-inline-image" src="assets/interior.jpg" alt="Bright renovated interior showing coordinated lighting finishes and circulation" loading="lazy" /><p class="article-image-caption">Project planning is strongest when design, site conditions and construction details are considered together.</p><h2>Permits protect the project path</h2>
+<p>The verified code point explicitly includes permits. That means a “legal basement” should never be marketed as a quick cosmetic finish. Drawings and review create a documented path from the existing space to the proposed use. They also give contractors, owners and inspectors a common reference.</p>
+<p>Before construction, collect accurate measurements and identify windows, stairs, entrances, utilities, the electrical panel and mechanical equipment. Discuss the intended use, number of rooms and whether kitchen, bathroom or laundry functions are part of the scope.</p>
+<h2>A practical basement planning sequence</h2>
+<p>Start with a site assessment. Next, develop a layout around safety, circulation and services. Confirm the permit path and drawings before committing to finish selections. Then coordinate framing, mechanical, electrical, plumbing, insulation, fire-separation work and inspections in the correct order. Finish work comes after the concealed systems have been handled properly.</p>
+<p>Juneja Construction lists <a href="#services">legal basements, below-grade entrances, waterproofing, kitchens, bathrooms and interior finishing</a> among its services. Connecting these scopes early can prevent one part of the basement from creating problems for another.</p>
+<h2>Design for daily use</h2>
+<p>Code compliance is the baseline, not the whole experience. The space still needs practical storage, comfortable circulation, useful lighting and durable finishes. Think about noise between rooms, access to laundry, where shoes and coats will go and how maintenance points remain reachable.</p>
+<p>A free-quote conversation should begin with the existing basement and the desired use. Photos are helpful, but they do not replace measurements and a site review. Avoid relying on a neighbour’s layout: two similar homes can have different utilities, alterations and site conditions.</p>
+<h2>Prepare for a clearer first conversation</h2><p>Before requesting a quote, collect a short project brief, current photos and approximate room dimensions. Record the desired use, the problems that need solving, your preferred timing and a realistic budget boundary. Note any visible utilities, access limitations or previous alterations. This preparation does not replace a site assessment, but it helps the contractor understand priorities and identify the questions that must be answered next.</p><p>Keep policy, financing and tax questions separate from construction assumptions. Confirm official eligibility through the responsible program or adviser, while using the construction consultation to define scope, sequencing and site realities. Clear responsibilities at the beginning make later decisions easier to compare.</p><h2>FAQ</h2><div class="article-faq"><h3>What minimum ceiling height is stated for a legal basement?</h3><p>The supplied verified point is a minimum 1.95 metres under Ontario’s 2024 Building Code, mandatory since January 1, 2025.</p><h3>Are egress windows and fire separation required considerations?</h3><p>Yes. Both are among the verified legal-basement requirements, along with permits. Their specific implementation must be resolved for the project.</p><h3>Can I start finishing before permits?</h3><p>The permit path belongs at the beginning. Confirm approvals and drawings before work that could conceal or conflict with required construction.</p></div><div class="article-cta"><h2>Planning a project?</h2><p>Discuss your space, priorities and preferred timeline with Juneja Construction.</p><a class="button button-primary" href="#quote">Get Your Free Quote</a></div></article><article class="article-panel" id="article-gta-market-august-2026-renovate-or-move" data-slug="gta-market-august-2026-renovate-or-move" data-meta-title="GTA Home Prices: Renovate or Move in 2026?" data-meta-description="TRREB’s August 2026 GTA average price was $993,410, down 2.7% year over year. Use this market snapshot to compare renovating with moving wisely today."><div class="article-meta">Housing Market · Published October 3, 2026</div><h1>GTA Home Prices: Renovate or Move in 2026?</h1><img class="article-hero-image" src="assets/articles/gta-home.jpg" alt="Contemporary renovated Toronto home exterior for a 2026 renovate-versus-move comparison" /><p class="dek">TRREB reported an average GTA home price of $993,410 in August 2026, down 2.7% year over year. That snapshot can help frame a renovate-or-move decision, but it cannot decide what is best for one household or one property.</p>
+<h2>What the market number does—and does not—say</h2>
+<p>An average combines many property types and locations. It does not tell you the value of a specific home, the cost of the next property or the renovation budget required to make your current space work better. Treat the $993,410 figure and 2.7% annual decline as context, not a personalized valuation.</p>
+<p>A softer year-over-year average may change negotiating conditions, yet moving still involves finding a suitable property and accepting its layout, finishes and future work. Renovating keeps the location and changes the space. The comparison should include both the financial and practical sides.</p>
+<h2>When renovation deserves a closer look</h2>
+<p>Renovation is worth exploring when the location works but the house does not. Common problems include a closed or inefficient kitchen, a bathroom that no longer fits the household, an unfinished basement, poor storage or a layout that wastes existing square footage.</p>
+<p>A targeted <a href="#services">kitchen, bathroom or basement project</a> can focus investment on daily problems. A whole-home renovation or addition may be appropriate when several issues connect. The key is to define what must change and what can remain.</p>
+<img class="article-inline-image" src="assets/articles/kitchen-design.jpg" alt="Renovated kitchen interior showing how existing GTA homes can gain function" loading="lazy" /><p class="article-image-caption">Project planning is strongest when design, site conditions and construction details are considered together.</p><h2>Compare complete paths</h2>
+<p>For moving, list the target home features and research the costs and disruption associated with the transaction and another property. For renovating, begin with a site assessment, scope and realistic allowance for materials and unknown conditions. Do not compare the asking price of another home with only the visible finish cost of a renovation.</p>
+<p>Time matters too. A move and a renovation each have dependencies. Renovation may involve design, permits, selections and construction sequencing. Moving may involve search time, conditions, closing and work in the new home. Put both paths on a timeline before choosing.</p>
+<h2>Build a decision brief</h2>
+<p>Create two columns: “what works now” and “what must improve.” Include bedrooms, bathrooms, storage, work space, accessibility, parking, outdoor use and proximity to the places that matter. Then mark each need as essential or preferred.</p>
+<p>If renovation can address the essential items, request a scope conversation. Bring photos, a rough layout, priorities, budget boundaries and timing. If the existing structure or lot cannot support the plan, that is useful information too. The goal is a decision grounded in the property, not in a broad market average alone.</p>
+<h2>Use design to protect value and function</h2>
+<p>Good renovation decisions solve present needs without creating awkward future compromises. Keep circulation clear, maintain useful room proportions and choose durable materials suited to the space. A premium result is not simply more expensive finishes; it is a coherent plan executed carefully.</p>
+<p>Juneja Construction works across <a href="#services">home renovations, kitchens, bathrooms, legal basements and additions</a> in Brampton / GTA and nearby areas. A free quote is the next step when you have identified the problems you want the project to solve.</p>
+<h2>Prepare for a clearer first conversation</h2><p>Before requesting a quote, collect a short project brief, current photos and approximate room dimensions. Record the desired use, the problems that need solving, your preferred timing and a realistic budget boundary. Note any visible utilities, access limitations or previous alterations. This preparation does not replace a site assessment, but it helps the contractor understand priorities and identify the questions that must be answered next.</p><p>Keep policy, financing and tax questions separate from construction assumptions. Confirm official eligibility through the responsible program or adviser, while using the construction consultation to define scope, sequencing and site realities. Clear responsibilities at the beginning make later decisions easier to compare.</p><h2>FAQ</h2><div class="article-faq"><h3>What was the August 2026 GTA average price?</h3><p>The supplied TRREB figure is $993,410, down 2.7% year over year.</p><h3>Does that mean renovating is always cheaper?</h3><p>No. The market figure is not a renovation estimate. Compare complete, property-specific moving and renovation paths before deciding.</p><h3>What should I prepare for a renovation consultation?</h3><p>Bring your priorities, photos, rough measurements, timing and budget boundaries. Explain what does not work today and what a successful result must change.</p></div><div class="article-cta"><h2>Planning a project?</h2><p>Discuss your space, priorities and preferred timeline with Juneja Construction.</p><a class="button button-primary" href="#quote">Get Your Free Quote</a></div></article><article class="article-panel" id="article-ontario-zoning-single-stair-six-storeys" data-slug="ontario-zoning-single-stair-six-storeys" data-meta-title="Ontario Zoning and Single-Stair Housing Ideas" data-meta-description="Toronto Board of Trade’s October 2026 proposal: a provincial zoning code and single-stair buildings up to six storeys, with useful context for owners."><div class="article-meta">Government Policies · Published October 2, 2026</div><h1>Ontario Zoning and Single-Stair Housing Ideas</h1><img class="article-hero-image" src="assets/articles/zoning-apartments.jpg" alt="Mid-rise apartment construction illustrating Ontario zoning and six-storey housing proposals" /><p class="dek">In October 2026, the Toronto Board of Trade proposed a provincial zoning code and single-stair buildings up to six storeys. The proposal adds to a broader conversation about approvals, gentle density and how Ontario can create more housing choices.</p>
+<h2>What has been proposed</h2>
+<p>The two verified elements are a provincial zoning code proposal and support for single-stair buildings up to six storeys. A proposal is not the same as a rule currently available for every project. Owners should avoid treating the headline as permission to design or build outside the requirements that apply today.</p>
+<p>A provincial zoning code could create more consistency in how housing forms are considered. Single-stair permissions could affect the design of some smaller multi-unit buildings. The eventual effect depends on what is adopted, where it applies and how it works with building, fire and local approval requirements.</p>
+<h2>Why zoning consistency matters</h2>
+<p>Zoning shapes what can be built and where. When rules differ significantly by municipality or site, early project analysis carries more uncertainty. A more consistent framework could make some questions easier to screen, but a property would still need a site-specific review.</p>
+<p>For a homeowner, the practical takeaway is to separate three layers: the desired use, the property’s physical capacity and the rules currently in force. A policy proposal belongs in the third layer as something to monitor, not as a substitute for present approvals.</p>
+<img class="article-inline-image" src="assets/articles/design-catalogue.jpg" alt="Low-rise housing form illustrating gentle density choices in Canadian neighbourhoods" loading="lazy" /><p class="article-image-caption">Project planning is strongest when design, site conditions and construction details are considered together.</p><h2>Single-stair buildings and design</h2>
+<p>Allowing a single stair in buildings up to six storeys is discussed as a way to unlock different floor plans and smaller sites. That does not mean safety considerations disappear. Any implemented model would need to address the applicable building and fire-safety framework.</p>
+<p>This policy discussion is different from planning a legal basement, home addition or interior renovation. Those projects have their own scopes. Still, the shared lesson is useful: circulation, exits and code-sensitive elements belong at the centre of the design, not at the end.</p>
+<h2>How property owners can plan now</h2>
+<p>Work from confirmed current requirements. If the project is an existing-home improvement, define the immediate need: more functional rooms, a legal lower-level space, an addition or upgraded interiors. Review the site and approval path before pricing decorative selections.</p>
+<p>For a broader development idea, document the lot, intended number of homes and the reason the concept fits the area. Then seek the right planning and design advice. Do not assume the October 2026 proposal has already changed the rules for the property.</p>
+<h2>Connect policy to construction carefully</h2>
+<p>Juneja Construction’s <a href="#services">renovation and construction services</a> include residential and commercial scopes. A contractor conversation can help define buildability and sequencing, while zoning interpretations and approvals should be confirmed through the responsible authorities and qualified professionals.</p>
+<p>Good planning avoids both extremes: ignoring policy changes entirely and chasing them before they are operative. Monitor verified updates, but keep today’s project grounded in today’s rules, the actual site and a clear construction scope.</p>
+<h2>Prepare for a clearer first conversation</h2><p>Before requesting a quote, collect a short project brief, current photos and approximate room dimensions. Record the desired use, the problems that need solving, your preferred timing and a realistic budget boundary. Note any visible utilities, access limitations or previous alterations. This preparation does not replace a site assessment, but it helps the contractor understand priorities and identify the questions that must be answered next.</p><p>Keep policy, financing and tax questions separate from construction assumptions. Confirm official eligibility through the responsible program or adviser, while using the construction consultation to define scope, sequencing and site realities. Clear responsibilities at the beginning make later decisions easier to compare.</p><h2>FAQ</h2><div class="article-faq"><h3>What did the Toronto Board of Trade propose?</h3><p>The supplied October 2026 point is a provincial zoning code proposal and single-stair buildings up to six storeys.</p><h3>Is the proposal already law everywhere in Ontario?</h3><p>The verified point describes a proposal. It should not be treated as a province-wide permission without confirmation that rules have changed and apply to the site.</p><h3>Does this affect my interior renovation?</h3><p>Not necessarily. Interior, basement and addition projects have their own requirements. Confirm the scope and current approvals for your property.</p></div><div class="article-cta"><h2>Planning a project?</h2><p>Discuss your space, priorities and preferred timeline with Juneja Construction.</p><a class="button button-primary" href="#quote">Get Your Free Quote</a></div></article><article class="article-panel" id="article-modular-factory-built-homes-canada-2026" data-slug="modular-factory-built-homes-canada-2026" data-meta-title="Modular Homes in Canada: The 2026 Opportunity" data-meta-description="Modular and factory-built housing is part of Canada’s 2026 housing push. Learn what repeatable production can offer and what still needs site planning."><div class="article-meta">Construction · Published October 1, 2026</div><h1>Modular Homes in Canada: The 2026 Opportunity</h1><img class="article-hero-image" src="assets/articles/modular-home.webp" alt="Modular home components being assembled in a factory-built construction process" /><p class="dek">Modular and factory-built housing is a clear part of Canada’s 2026 homebuilding push. The approach moves more construction into a controlled production setting, but it does not remove the need to plan the site, approvals, services and final installation.</p>
+<h2>What factory-built construction changes</h2>
+<p>Conventional construction completes most work on site. Factory-built methods shift defined assemblies or modules into a repeatable production environment before they arrive at the property. The value proposition is consistency and a process designed around repetition, not a claim that every project becomes simple.</p>
+<p>The Spring Economic Update 2026 links modular and factory-built housing with regulation modernization. That connection makes sense: repeatable systems work best when design information and approval expectations are clear. The $41.9 million modernization measure and broader modular push are policy signals, not a guarantee of suitability for a particular lot.</p>
+<h2>The site still controls key decisions</h2>
+<p>A module must still reach the property and connect to a prepared site. Access, grade, foundation conditions, servicing, lifting or placement logistics and local requirements remain important. A design that is efficient to manufacture may need adaptation to work on a specific property.</p>
+<p>Owners should ask where the factory scope ends and site work begins. Foundations, utility connections, exterior transitions, drainage and finish coordination can cross that boundary. Clear responsibility is essential so that a gap between suppliers does not become the owner’s surprise.</p>
+<img class="article-inline-image" src="assets/articles/housing-construction.jpg" alt="Canadian construction site showing the on-site work that complements factory-built housing" loading="lazy" /><p class="article-image-caption">Project planning is strongest when design, site conditions and construction details are considered together.</p><h2>Modular thinking can improve renovation planning</h2>
+<p>Even when a project is not modular, the underlying discipline is useful. Standardize repeatable details, make selections before installation and coordinate systems before closing walls. Kitchens and bathrooms benefit from accurate dimensions and early decisions because cabinetry, plumbing, electrical and finishes interact closely.</p>
+<p>A <a href="#services">whole-home renovation, addition or commercial interior</a> also becomes easier to manage when work is divided into clear packages. The goal is not to force a factory method onto an existing building; it is to borrow the planning strengths of repeatable production.</p>
+<h2>Questions for a modular concept</h2>
+<p>Ask what is included in the factory price, how transportation works, what site preparation is required and which approvals remain. Review the sequence from design freeze to manufacturing, delivery, installation and final connections. Changes made late may affect more than one repeated component.</p>
+<p>Also ask how the finished design relates to the neighbourhood and daily use. Speed or repeatability should not replace natural light, storage, circulation, privacy and durable exterior connections. A successful home still needs to work after the delivery day.</p>
+<h2>Choose the method after defining the outcome</h2>
+<p>Start with the housing need, not the construction label. If an existing home can meet the need through a basement, addition or interior reconfiguration, compare that path with a factory-built option on complete scope, timing and site requirements.</p>
+<p>Juneja Construction can discuss the on-site realities of <a href="#services">renovation, additions, basements and finish work</a> in Brampton / GTA and nearby areas. For a modular system, pair the contractor conversation with the selected manufacturer and the authorities responsible for approvals.</p>
+<h2>Prepare for a clearer first conversation</h2><p>Before requesting a quote, collect a short project brief, current photos and approximate room dimensions. Record the desired use, the problems that need solving, your preferred timing and a realistic budget boundary. Note any visible utilities, access limitations or previous alterations. This preparation does not replace a site assessment, but it helps the contractor understand priorities and identify the questions that must be answered next.</p><p>Keep policy, financing and tax questions separate from construction assumptions. Confirm official eligibility through the responsible program or adviser, while using the construction consultation to define scope, sequencing and site realities. Clear responsibilities at the beginning make later decisions easier to compare.</p><h2>FAQ</h2><div class="article-faq"><h3>Are modular homes part of Canada’s 2026 housing policy?</h3><p>Yes. The supplied verified point identifies a federal push toward modular and factory-built housing, alongside homebuilding regulation modernization.</p><h3>Does modular mean no permits or site work?</h3><p>No. The verified policy point does not remove approvals or site requirements. Confirm the exact path for the property and system.</p><h3>Can modular methods help renovations?</h3><p>A conventional renovation can benefit from modular-style planning: repeatable details, accurate dimensions, early selections and better coordination before installation.</p></div><div class="article-cta"><h2>Planning a project?</h2><p>Discuss your space, priorities and preferred timeline with Juneja Construction.</p><a class="button button-primary" href="#quote">Get Your Free Quote</a></div></article><article class="article-panel" id="article-gta-kitchen-bathroom-design-trends-2026" data-slug="gta-kitchen-bathroom-design-trends-2026" data-meta-title="2026 GTA Kitchen and Bathroom Design Planning" data-meta-description="A practical 2026 GTA guide to kitchen and bathroom design: improve layout, storage, lighting, waterproofing and durable finishes before selecting styles."><div class="article-meta">Design Trends · Published September 30, 2026</div><h1>2026 GTA Kitchen and Bathroom Design Planning</h1><img class="article-hero-image" src="assets/articles/kitchen-design.jpg" alt="Premium renovated kitchen with layered lighting and durable finishes for 2026 GTA design planning" /><p class="dek">The strongest 2026 kitchen and bathroom designs start with performance. Style matters, but layout, storage, lighting, waterproofing and durable finishes determine whether the room works long after the renovation photos are taken.</p>
+<h2>Start with the daily friction</h2>
+<p>Before collecting inspiration, write down what fails in the current room. In a kitchen, it may be poor circulation, limited landing space, inaccessible storage or lighting that leaves work surfaces dim. In a bathroom, it may be an awkward door swing, insufficient storage, a difficult shower entry or finishes that are hard to maintain.</p>
+<p>This problem list is more valuable than a folder of disconnected images. It gives the design a job to do. Bring it to the first <a href="#services">kitchen or bathroom consultation</a> and rank every item as essential, preferred or optional.</p>
+<h2>Plan layout before finishes</h2>
+<p>A premium kitchen is not defined by one countertop material. It is defined by how people move between storage, preparation, cooking and cleanup. Protect clear paths and make sure doors, drawers and appliances can work together without constant conflict.</p>
+<p>For bathrooms, start with safe movement and the relationship between the vanity, toilet, shower or tub and the entry. Changing plumbing locations can affect scope, so the layout conversation should happen before product selection. The most attractive tile cannot fix a room that is difficult to use.</p>
+<img class="article-inline-image" src="assets/articles/legal-basement.jpg" alt="Finished interior demonstrating coordinated lighting storage and practical renovation finishes" loading="lazy" /><p class="article-image-caption">Project planning is strongest when design, site conditions and construction details are considered together.</p><h2>Storage should match real items</h2>
+<p>List what the room needs to hold. In the kitchen, consider cookware, small appliances, pantry goods, waste sorting and everyday dishes. In the bathroom, account for towels, toiletries, cleaning supplies and electrical items. Design storage around those categories instead of adding generic cabinets wherever space remains.</p>
+<p>Use accessible zones for frequently used items and reserve harder-to-reach spaces for occasional use. A clear inventory also helps prevent overbuilding cabinetry that makes the room feel tight.</p>
+<h2>Light in layers</h2>
+<p>One ceiling fixture rarely serves every task. Plan general light for the room, focused light where work happens and softer light for comfort. Switch locations and control should follow how people enter and use the space.</p>
+<p>Lighting decisions connect to cabinetry, mirrors, ceilings and electrical work. Coordinating them early prevents visible compromises after finishes are installed. The aim is a room that is easy to use at different times of day, not simply a brighter room.</p>
+<h2>Durability is part of the design</h2>
+<p>Kitchens face heat, spills, impact and frequent cleaning. Bathrooms add sustained moisture and waterproofing demands. Select materials for the conditions, and pay attention to installation details as much as the surface appearance.</p>
+<p>In a bathroom, waterproofing belongs behind the visible finish. In both rooms, transitions, edges, sealants and ventilation affect how the renovation ages. Ask how the proposed system works as a whole rather than evaluating products one by one.</p>
+<h2>Create one coherent material story</h2>
+<p>Limit the number of competing finishes. Choose a dominant tone, a supporting material and a small number of accents. Then review samples together under the room’s actual light. This produces a calmer result and makes later selections easier.</p>
+<p>Juneja Construction offers <a href="#services">kitchen remodels, bathroom remodels and whole-home renovation</a>. A free quote conversation can turn the problem list into a scoped plan, with layout and construction decisions ahead of decoration.</p>
+<h2>Prepare for a clearer first conversation</h2><p>Before requesting a quote, collect a short project brief, current photos and approximate room dimensions. Record the desired use, the problems that need solving, your preferred timing and a realistic budget boundary. Note any visible utilities, access limitations or previous alterations. This preparation does not replace a site assessment, but it helps the contractor understand priorities and identify the questions that must be answered next.</p><p>Keep policy, financing and tax questions separate from construction assumptions. Confirm official eligibility through the responsible program or adviser, while using the construction consultation to define scope, sequencing and site realities. Clear responsibilities at the beginning make later decisions easier to compare.</p><h2>FAQ</h2><div class="article-faq"><h3>What should I choose first?</h3><p>Choose the functional priorities and layout before decorative finishes. Those early decisions affect plumbing, electrical, cabinetry and the project sequence.</p><h3>How can I keep a design from dating quickly?</h3><p>Prioritize useful proportions, durable materials and a restrained finish palette. Trend labels matter less than a room that works well and is carefully built.</p><h3>Should I renovate the kitchen and bathroom together?</h3><p>That depends on budget, disruption and the wider home plan. Discuss both scopes together, then decide whether one coordinated project or phased work is more practical.</p></div><div class="article-cta"><h2>Planning a project?</h2><p>Discuss your space, priorities and preferred timeline with Juneja Construction.</p><a class="button button-primary" href="#quote">Get Your Free Quote</a></div></article>
+    </div>
+  </div>
+
+  <div class="contact-modal" id="contact-modal" aria-hidden="true">
+    <div class="contact-modal-card" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+      <button class="modal-close" id="modal-close" type="button" aria-label="Close contact options">×</button>
+      <div class="rule"></div>
+      <h2 id="contact-modal-title">Get Your Free Quote</h2>
+      <p>Tell us about your project. Choose the fastest way to connect with Juneja Construction.</p>
+      <div class="modal-actions">
+        <a href="tel:+16477018906">Call Now</a>
+        <a href="https://wa.me/16477018906?text=Hi%20Juneja%20Construction%2C%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="mailto:info@junejaconstruction.ca">Email</a>
+      </div>
+      <a class="button button-primary modal-quote" href="#quote">View Free Quote Options</a>
+    </div>
+  </div>
+
+  <button class="chat-launcher" id="chat-launcher" type="button" aria-expanded="false" aria-controls="chat-panel" aria-label="Open project assistant">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 01-8 8H6l-4 2 1.2-4A9 9 0 1121 12z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></svg>
+  </button>
+  <section class="chat-panel" id="chat-panel" aria-label="Juneja project assistant">
+    <div class="chat-head"><div><strong>Project Assistant</strong><small>Instant answers · Free quote help</small></div><button class="chat-close" id="chat-close" type="button" aria-label="Close project assistant">×</button></div>
+    <div class="chat-messages" id="chat-messages" aria-live="polite">
+      <div class="chat-message">Hi! I can help with services, hours and starting a free quote.</div>
+      <div class="quick-replies" aria-label="Suggested questions"><button type="button" data-chat="services">Services</button><button type="button" data-chat="hours">Hours</button><button type="button" data-chat="area">Service area</button><button type="button" data-chat="quote">Free quote</button></div>
+    </div>
+    <form class="chat-compose" id="chat-compose"><label class="sr-only" for="chat-input" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Ask a question</label><input id="chat-input" type="text" autocomplete="off" placeholder="Ask about your project…" /><button type="submit">Send</button></form>
+  </section>
+
+  <a class="whatsapp-float" href="https://wa.me/16477018906?text=Hi%20Juneja%20Construction%2C%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener noreferrer" aria-label="Chat with Juneja Construction on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.5a8.5 8.5 0 01-12.6 7.45L3 20l1.1-4.1A8.5 8.5 0 1120 11.5z"/><path d="M8.2 7.8c.4 3.3 2.7 5.6 6 6l1.1-1.7 2.1.8c-.1 1.8-1.4 3.1-3.2 3.1-4.5 0-8.2-3.7-8.2-8.2 0-1.8 1.3-3.1 3.1-3.2l.8 2.1-1.7 1.1z"/></svg><span>WhatsApp</span></a>
+  <div class="mobile-quote" aria-label="Quick contact actions"><a href="tel:+16477018906">Call now</a><a href="https://wa.me/16477018906?text=Hi%20Juneja%20Construction%2C%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="#quote">Free quote</a></div>
+
+
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Article","headline":"Canada\u2019s 2026 Housing Push: What Builders Should Know","description":"Canada 2026 housing update: low-cost rental loans, skilled-trades funding, regulation reform and modular construction priorities for GTA property owners.","datePublished":"2026-10-07","author":{"@type":"Organization","name":"Juneja Construction"},"publisher":{"@type":"Organization","name":"Juneja Construction"},"mainEntityOfPage":{"@type":"WebPage","@id":"#articles/spring-economic-update-2026-housing"}},{"@context":"https://schema.org","@type":"Article","headline":"Ontario\u2019s 2026 HST Relief for Eligible New Homes","description":"Ontario and federal 2026 new-home measures explained: full HST relief for eligible homes, potential savings up to $130,000 and development charge cuts.","datePublished":"2026-10-06","author":{"@type":"Organization","name":"Juneja Construction"},"publisher":{"@type":"Organization","name":"Juneja Construction"},"mainEntityOfPage":{"@type":"WebPage","@id":"#articles/ontario-hst-relief-new-homes-2026"}},{"@context":"https://schema.org","@type":"Article","headline":"Canada\u2019s Housing Design Catalogue: A Practical Guide","description":"Explore Canada\u2019s Housing Design Catalogue with 50+ free pre-approved low-rise designs and what gentle density can mean for careful property planning.","datePublished":"2026-10-05","author":{"@type":"Organization","name":"Juneja Construction"},"publisher":{"@type":"Organization","name":"Juneja Construction"},"mainEntityOfPage":{"@type":"WebPage","@id":"#articles/canada-housing-design-catalogue-guide"}},{"@context":"https://schema.org","@type":"Article","headline":"Legal Basements and Ontario\u2019s 2024 Building Code","description":"Planning a legal basement under Ontario\u2019s mandatory 2024 Building Code: 1.95 m ceiling, egress windows, fire separation, permits and project steps.","datePublished":"2026-10-04","author":{"@type":"Organization","name":"Juneja Construction"},"publisher":{"@type":"Organization","name":"Juneja Construction"},"mainEntityOfPage":{"@type":"WebPage","@id":"#articles/ontario-building-code-legal-basement-2026"}},{"@context":"https://schema.org","@type":"Article","headline":"GTA Home Prices: Renovate or Move in 2026?","description":"TRREB\u2019s August 2026 GTA average price was $993,410, down 2.7% year over year. Use that market snapshot to compare renovating with moving.","datePublished":"2026-10-03","author":{"@type":"Organization","name":"Juneja Construction"},"publisher":{"@type":"Organization","name":"Juneja Construction"},"mainEntityOfPage":{"@type":"WebPage","@id":"#articles/gta-market-august-2026-renovate-or-move"}},{"@context":"https://schema.org","@type":"Article","headline":"Ontario Zoning and Single-Stair Housing Ideas","description":"Toronto Board of Trade\u2019s October 2026 proposal: a provincial zoning code and single-stair buildings up to six storeys, with context for owners.","datePublished":"2026-10-02","author":{"@type":"Organization","name":"Juneja Construction"},"publisher":{"@type":"Organization","name":"Juneja Construction"},"mainEntityOfPage":{"@type":"WebPage","@id":"#articles/ontario-zoning-single-stair-six-storeys"}},{"@context":"https://schema.org","@type":"Article","headline":"Modular Homes in Canada: The 2026 Opportunity","description":"Modular and factory-built housing is part of Canada\u2019s 2026 housing push. Learn what repeatable production can offer and what still needs site planning.","datePublished":"2026-10-01","author":{"@type":"Organization","name":"Juneja Construction"},"publisher":{"@type":"Organization","name":"Juneja Construction"},"mainEntityOfPage":{"@type":"WebPage","@id":"#articles/modular-factory-built-homes-canada-2026"}},{"@context":"https://schema.org","@type":"Article","headline":"2026 GTA Kitchen and Bathroom Design Planning","description":"A practical 2026 GTA guide to kitchen and bathroom design: improve layout, storage, lighting, waterproofing and durable finishes before selecting styles.","datePublished":"2026-09-30","author":{"@type":"Organization","name":"Juneja Construction"},"publisher":{"@type":"Organization","name":"Juneja Construction"},"mainEntityOfPage":{"@type":"WebPage","@id":"#articles/gta-kitchen-bathroom-design-trends-2026"}}]</script>
+  <script>
+    (function () {
+      var menuButton = document.querySelector('.menu-button');
+      var navLinks = document.getElementById('nav-links');
+      menuButton.addEventListener('click', function () {
+        var open = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!open));
+        menuButton.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+        navLinks.classList.toggle('open', !open);
+      });
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menuButton.setAttribute('aria-expanded', 'false');
+          menuButton.setAttribute('aria-label', 'Open menu');
+          navLinks.classList.remove('open');
+        });
+      });
+
+      document.querySelectorAll('.faq-button').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var open = button.getAttribute('aria-expanded') === 'true';
+          button.setAttribute('aria-expanded', String(!open));
+        });
+      });
+
+      var welcomeVideo = document.getElementById('welcome-video');
+      var soundToggle = document.getElementById('sound-toggle');
+      var soundLabel = soundToggle.querySelector('span');
+      function playWelcomeWithSound() {
+        welcomeVideo.muted = false;
+        welcomeVideo.play();
+        soundLabel.textContent = 'Sound on';
+        soundToggle.setAttribute('aria-label', 'Mute welcome video');
+        soundToggle.setAttribute('aria-pressed', 'true');
+      }
+      welcomeVideo.addEventListener('click', playWelcomeWithSound);
+      soundToggle.addEventListener('click', function () {
+        if (welcomeVideo.muted) {
+          playWelcomeWithSound();
+        } else {
+          welcomeVideo.muted = true;
+          soundLabel.textContent = 'Tap for sound';
+          soundToggle.setAttribute('aria-label', 'Play welcome video with sound');
+          soundToggle.setAttribute('aria-pressed', 'false');
+        }
+      });
+
+      /* CONTACT PROMPT: intentionally shown once during this page session. */
+      var contactModal = document.getElementById('contact-modal');
+      var modalClose = document.getElementById('modal-close');
+      var promptShown = false;
+      var lastFocused = null;
+      function closeContactModal() {
+        contactModal.classList.remove('open');
+        contactModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+        if (lastFocused) lastFocused.focus();
+      }
+      function openContactModal() {
+        if (promptShown) return;
+        promptShown = true;
+        lastFocused = document.activeElement;
+        contactModal.classList.add('open');
+        contactModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        modalClose.focus();
+      }
+      window.setTimeout(openContactModal, 2500);
+      modalClose.addEventListener('click', closeContactModal);
+      contactModal.addEventListener('click', function (event) { if (event.target === contactModal) closeContactModal(); });
+      document.querySelectorAll('.article-cta a').forEach(function (link) { link.addEventListener('click', function () { closeArticle(false); }); });
+      contactModal.querySelectorAll('a').forEach(function (link) { link.addEventListener('click', closeContactModal); });
+      document.addEventListener('keydown', function (event) { if (event.key === 'Escape' && contactModal.classList.contains('open')) closeContactModal(); });
+
+      /* Knowledge Corner uses repeatable, crawlable in-page article panels and clean hash slugs. */
+      var articleReader = document.getElementById('article-reader');
+      var articleReaderClose = document.getElementById('article-reader-close');
+      var defaultTitle = document.title;
+      var metaDescription = document.querySelector('meta[name="description"]');
+      var defaultDescription = metaDescription.content;
+      function openArticle(slug) {
+        var panel = document.querySelector('.article-panel[data-slug="' + slug + '"]');
+        if (!panel) return;
+        document.querySelectorAll('.article-panel').forEach(function (item) { item.classList.toggle('active', item === panel); });
+        articleReader.classList.add('open');
+        articleReader.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        document.title = panel.getAttribute('data-meta-title');
+        metaDescription.content = panel.getAttribute('data-meta-description');
+        articleReader.querySelector('.article-reader-shell').scrollTop = 0;
+        articleReaderClose.focus();
+      }
+      function closeArticle(updateHash) {
+        articleReader.classList.remove('open');
+        articleReader.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+        document.title = defaultTitle;
+        metaDescription.content = defaultDescription;
+        if (updateHash && location.hash.indexOf('#articles/') === 0) history.replaceState(null, '', '#articles');
+      }
+      document.querySelectorAll('[data-article-open]').forEach(function (link) {
+        link.addEventListener('click', function (event) { event.preventDefault(); history.pushState(null, '', link.getAttribute('href')); openArticle(link.getAttribute('data-article-open')); });
+      });
+      articleReaderClose.addEventListener('click', function () { closeArticle(true); });
+      articleReader.addEventListener('click', function (event) { if (event.target === articleReader) closeArticle(true); });
+      window.addEventListener('hashchange', function () {
+        var slug = location.hash.indexOf('#articles/') === 0 ? location.hash.slice(10) : '';
+        if (slug) openArticle(slug); else closeArticle(false);
+      });
+      var initialArticleSlug = location.hash.indexOf('#articles/') === 0 ? location.hash.slice(10) : '';
+      if (initialArticleSlug) openArticle(initialArticleSlug);
+
+      /* BOTPRESS: replace only the value below with the client's free Botpress bot ID. */
+      var BOTPRESS_BOT_ID = 'BOTPRESS_BOT_ID';
+      window.BOTPRESS_BOT_ID = BOTPRESS_BOT_ID;
+      if (BOTPRESS_BOT_ID !== 'BOTPRESS_BOT_ID') {
+        var botpressScript = document.createElement('script');
+        botpressScript.src = 'https://cdn.botpress.cloud/webchat/v3.2/inject.js';
+        botpressScript.onload = function () {
+          if (window.botpress && window.botpress.init) {
+            window.botpress.init({ botId: BOTPRESS_BOT_ID, configuration: { website: { title: 'Juneja Construction' } } });
+            document.getElementById('chat-launcher').hidden = true;
+            document.getElementById('chat-panel').hidden = true;
+          }
+        };
+        document.head.appendChild(botpressScript);
+      }
+
+      /* Built-in assistant remains fully functional until a Botpress ID is added. */
+      var chatLauncher = document.getElementById('chat-launcher');
+      var chatPanel = document.getElementById('chat-panel');
+      var chatClose = document.getElementById('chat-close');
+      var chatMessages = document.getElementById('chat-messages');
+      var chatCompose = document.getElementById('chat-compose');
+      var chatInput = document.getElementById('chat-input');
+      function setChat(open) {
+        chatPanel.classList.toggle('open', open);
+        chatLauncher.setAttribute('aria-expanded', String(open));
+        chatLauncher.setAttribute('aria-label', open ? 'Close project assistant' : 'Open project assistant');
+        if (open) window.setTimeout(function () { chatInput.focus(); }, 20);
+      }
+      function addMessage(text, fromUser) {
+        var message = document.createElement('div');
+        message.className = 'chat-message' + (fromUser ? ' user' : '');
+        message.textContent = text;
+        chatMessages.appendChild(message);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+      function showLeadForm() {
+        if (document.getElementById('lead-form')) return;
+        var form = document.createElement('form');
+        form.className = 'lead-form';
+        form.id = 'lead-form';
+        form.innerHTML = '<label>Your name<input name="name" required autocomplete="name"></label><label>Project type<input name="project" required placeholder="Kitchen, addition, commercial…"></label><label>Project location<input name="location" required placeholder="Brampton / GTA area"></label><button type="submit">Send details on WhatsApp</button>';
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          var data = new FormData(form);
+          var text = 'Hi Juneja Construction, I would like a free quote. Name: ' + data.get('name') + '. Project: ' + data.get('project') + '. Location: ' + data.get('location') + '.';
+          window.open('https://wa.me/16477018906?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
+          addMessage('Your details are ready in WhatsApp. Send the message there to connect with Juneja Construction.', false);
+        });
+        chatMessages.appendChild(form);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+      function answerChat(intent, label) {
+        if (label) addMessage(label, true);
+        if (intent === 'services') addMessage('Juneja handles home renovations, kitchens, bathrooms, legal basements, entrances, concrete, decks, fences, additions and commercial interiors.', false);
+        else if (intent === 'hours') addMessage('Hours are Monday through Sunday, 8:00 AM to 11:00 PM.', false);
+        else if (intent === 'area') addMessage('Juneja serves Brampton / GTA and nearby areas.', false);
+        else if (intent === 'quote') { addMessage('Share three details below and I’ll prepare a WhatsApp message for your free quote.', false); showLeadForm(); }
+      }
+      chatLauncher.addEventListener('click', function () { setChat(!chatPanel.classList.contains('open')); });
+      chatClose.addEventListener('click', function () { setChat(false); chatLauncher.focus(); });
+      chatMessages.addEventListener('click', function (event) {
+        var button = event.target.closest('[data-chat]');
+        if (button) answerChat(button.getAttribute('data-chat'), button.textContent);
+      });
+      chatCompose.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var query = chatInput.value.trim();
+        if (!query) return;
+        addMessage(query, true);
+        chatInput.value = '';
+        var normalized = query.toLowerCase();
+        if (/quote|estimate|price|cost|book|contact/.test(normalized)) answerChat('quote');
+        else if (/hour|open|time|sunday|monday/.test(normalized)) answerChat('hours');
+        else if (/area|serve|location|brampton|gta/.test(normalized)) answerChat('area');
+        else if (/service|kitchen|bath|basement|deck|fence|commercial|renovation|addition|concrete/.test(normalized)) answerChat('services');
+        else addMessage('I can help with services, hours, the service area or a free quote. For anything else, call 647-701-8906.', false);
+      });
+
+    })();
+  </script>
+</body>
+</html>
